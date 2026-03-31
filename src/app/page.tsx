@@ -8,6 +8,7 @@ import { GallerySection } from "@/components/GallerySection";
 const services = [
   {
     icon: "clipboard",
+    slug: "beratung",
     title: "Beratung & Planung",
     description:
       "Individuelle Beratung vor Ort und detaillierte technische Planung für Ihr Wärmepumpen-Projekt.",
@@ -15,6 +16,7 @@ const services = [
   },
   {
     icon: "truck",
+    slug: "installation",
     title: "Lieferung & Montage",
     description:
       "Fachgerechte Lieferung und professionelle Installation durch zertifizierte Techniker.",
@@ -22,6 +24,7 @@ const services = [
   },
   {
     icon: "refresh",
+    slug: "umruestung",
     title: "Heizungsumrüstung",
     description:
       "Kompletumstieg von Öl, Gas oder Elektro auf eine effiziente Wärmepumpe.",
@@ -29,6 +32,7 @@ const services = [
   },
   {
     icon: "shield",
+    slug: "wartung",
     title: "Wartung & Service",
     description:
       "Regelmäßige Wartung und schneller Service für störungsfreien Betrieb.",
@@ -252,23 +256,25 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 100}>
-                <div className="group relative bg-white p-8 rounded-3xl border border-border hover:border-transparent hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 h-full">
-                  {/* Gradient background on hover */}
-                  <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                  <div className="relative">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      <ServiceIcon name={service.icon} />
-                    </div>
-                    <h3 className="mt-6 text-lg font-bold text-foreground font-heading">{service.title}</h3>
-                    <p className="mt-3 text-sm text-muted leading-relaxed">{service.description}</p>
-                    <div className="mt-5 flex items-center text-accent text-sm font-semibold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                      Mehr erfahren
-                      <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                      </svg>
+                <Link href={`/leistungen/${service.slug}`} className="block h-full">
+                  <div className="group relative bg-white p-8 rounded-3xl border border-border hover:border-transparent hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 h-full cursor-pointer">
+                    {/* Gradient background on hover */}
+                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                    <div className="relative">
+                      <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <ServiceIcon name={service.icon} />
+                      </div>
+                      <h3 className="mt-6 text-lg font-bold text-foreground font-heading">{service.title}</h3>
+                      <p className="mt-3 text-sm text-muted leading-relaxed">{service.description}</p>
+                      <div className="mt-5 flex items-center text-accent text-sm font-semibold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        Mehr erfahren
+                        <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
