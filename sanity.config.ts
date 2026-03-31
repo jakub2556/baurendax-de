@@ -1,8 +1,8 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { schemaTypes } from "@/sanity/schema";
-import { projectId, dataset } from "@/sanity/env";
+import { schemaTypes } from "./src/sanity/schema";
+import { projectId, dataset } from "./src/sanity/env";
 
 export default defineConfig({
   name: "baurendax",
