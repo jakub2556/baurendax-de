@@ -13,9 +13,9 @@ export function OrganizationSchema() {
           url: "https://baurendax.de",
           logo: {
             "@type": "ImageObject",
-            url: "https://baurendax.de/images/logo.webp",
+            url: "https://baurendax.de/images/logo-baurendax.webp",
           },
-          image: "https://baurendax.de/images/Fotka-domu.webp",
+          image: "https://baurendax.de/images/hero-bg.webp",
           description:
             "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung, Lieferung und Montage aus einer Hand. Bis zu 70% staatliche Förderung.",
           areaServed: {

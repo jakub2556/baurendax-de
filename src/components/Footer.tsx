@@ -38,7 +38,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo-baurendax.webp"
               alt="Baurendax"
               width={160}
               height={53}
@@ -107,7 +107,7 @@ export function Footer() {
               href="https://eweby.eu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:text-accent-light transition-colors"
+              className="text-accent-light underline hover:text-white transition-colors"
             >
               EWEBY.EU
             </a>

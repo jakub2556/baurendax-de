@@ -36,7 +36,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 relative">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo-baurendax.webp"
               alt="Baurendax – Ihr Experte für Wärmepumpen"
               width={180}
               height={60}

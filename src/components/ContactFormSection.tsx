@@ -213,7 +213,7 @@ export function ContactFormSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left — Info */}
           <div>
-            <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-accent-dark font-semibold text-sm uppercase tracking-wider mb-2">
               Kontakt
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-heading">

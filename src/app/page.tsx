@@ -108,7 +108,7 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/Fotka-domu.webp"
+            src="/images/hero-bg.webp"
             alt="Modernes Haus mit Wärmepumpe"
             fill
             className="object-cover opacity-15 scale-105"
@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-primary-light/20 rounded-3xl blur-xl" />
                 <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                   <Image
-                    src="/images/Fotka-domu.webp"
+                    src="/images/hero-bg.webp"
                     alt="Modernes Haus mit Wärmepumpe"
                     width={600}
                     height={450}
@@ -354,7 +354,7 @@ export default function Home() {
                 {/* Main image */}
                 <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-border">
                   <Image
-                    src="/images/service-1024x683.webp"
+                    src="/images/service-techniker.webp"
                     alt="Techniker installiert Wärmepumpe"
                     width={600}
                     height={400}
@@ -364,7 +364,7 @@ export default function Home() {
                 {/* Floating secondary image */}
                 <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white animate-float">
                   <Image
-                    src="/images/ChatGPT-Image-23.-3.-2026-13_29_06.webp"
+                    src="/images/hero-house-pump.webp"
                     alt="Wärmepumpe an Haus"
                     width={200}
                     height={200}

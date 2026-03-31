@@ -43,7 +43,7 @@ export const services: Service[] = [
     shortDescription: "Fachgerechte Lieferung und professionelle Montage durch zertifizierte Techniker.",
     description:
       "Wir liefern hochwertige Marken-Wärmepumpen und installieren diese fachgerecht. Unsere zertifizierten Techniker sorgen für eine saubere, termingerechte Montage — zum garantierten Festpreis.",
-    image: "/images/service-1024x683.webp",
+    image: "/images/service-techniker.webp",
     features: [
       "Markengeräte von Viessmann, Bosch & Co.",
       "Zertifizierte Montage-Techniker",

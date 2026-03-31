@@ -215,7 +215,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             publisher: {
               "@type": "Organization",
               name: "Baurendax",
-              logo: { "@type": "ImageObject", url: "https://baurendax.de/images/logo.webp" },
+              logo: { "@type": "ImageObject", url: "https://baurendax.de/images/logo-baurendax.webp" },
             },
           }),
         }}
