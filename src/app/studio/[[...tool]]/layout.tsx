@@ -1,0 +1,7 @@
+export default function StudioLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="sk">
+      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+    </html>
+  );
+}
