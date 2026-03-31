@@ -32,7 +32,7 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-22 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 relative">
             <Image
@@ -41,7 +41,7 @@ export function Header() {
               width={180}
               height={60}
               priority
-              className={`h-11 w-auto transition-all duration-300 ${!scrolled ? "brightness-0 invert" : ""}`}
+              className={`h-14 sm:h-16 w-auto transition-all duration-300 ${!scrolled ? "brightness-0 invert" : ""}`}
             />
           </Link>
 

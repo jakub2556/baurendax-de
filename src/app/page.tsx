@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { GallerySection } from "@/components/GallerySection";
 
 const services = [
   {
@@ -417,49 +418,7 @@ export default function Home() {
       </section>
 
       {/* === GALLERY === */}
-      <section className="bg-white py-28 lg:py-36">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
-                Unsere Projekte
-              </span>
-              <h2 className="text-4xl sm:text-5xl font-bold text-foreground font-heading tracking-tight">
-                Referenzen aus ganz Deutschland
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-            {[
-              { src: "/images/IMG20251104143313-scaled.jpg", alt: "Wärmepumpe Installation", span: "" },
-              { src: "/images/IMG20251109155056-1-scaled.jpg", alt: "Wärmepumpe Montage", span: "lg:row-span-2" },
-              { src: "/images/IMG20251101120210-scaled.jpg", alt: "Außeneinheit Installation", span: "" },
-              { src: "/images/IMG20250930173005-scaled.jpg", alt: "Fertige Wärmepumpe", span: "" },
-              { src: "/images/IMG20251009202259-scaled.jpg", alt: "Technikraum", span: "" },
-              { src: "/images/IMG20251104135953-scaled.jpg", alt: "Wärmepumpe Service", span: "" },
-            ].map((img, i) => (
-              <ScrollReveal key={img.src} delay={i * 80}>
-                <div className={`rounded-3xl overflow-hidden group cursor-pointer ${img.span}`}>
-                  <div className="relative overflow-hidden h-full">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      width={600}
-                      height={400}
-                      className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${img.span ? "h-full" : "h-64 lg:h-72"}`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute bottom-4 left-4 text-white font-semibold text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      {img.alt}
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GallerySection />
 
       {/* === FAQ PREVIEW === */}
       <section className="bg-surface py-28 lg:py-36">

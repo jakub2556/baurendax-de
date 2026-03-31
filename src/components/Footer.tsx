@@ -42,7 +42,7 @@ export function Footer() {
               alt="Baurendax"
               width={160}
               height={53}
-              className="h-10 w-auto brightness-0 invert mb-4"
+              className="h-14 w-auto brightness-0 invert mb-4"
             />
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Ihr zuverlässiger Partner für Wärmepumpen in ganz Deutschland. Von der Beratung bis zur
