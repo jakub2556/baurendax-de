@@ -2,48 +2,48 @@ import { defineField, defineType } from "sanity";
 
 export const page = defineType({
   name: "page",
-  title: "Seiten",
+  title: "Stránky",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Seitentitel",
+      title: "Názov stránky",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "URL-Slug",
+      title: "URL adresa",
       type: "slug",
       options: { source: "title", maxLength: 96 },
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "seoTitle",
-      title: "SEO Titel",
+      title: "SEO titulok",
       type: "string",
-      description: "Überschreibt den Seitentitel in Suchmaschinen",
+      description: "Prepíše názov stránky vo vyhľadávačoch",
     }),
     defineField({
       name: "seoDescription",
-      title: "SEO Beschreibung",
+      title: "SEO popis",
       type: "text",
       rows: 3,
-      description: "Meta-Beschreibung für Suchmaschinen (max. 160 Zeichen)",
+      description: "Meta popis pre vyhľadávače (max. 160 znakov)",
       validation: (rule) => rule.max(160),
     }),
     defineField({
       name: "content",
-      title: "Inhalt",
+      title: "Obsah",
       type: "array",
       of: [
         {
           type: "block",
           styles: [
-            { title: "Normal", value: "normal" },
-            { title: "H2", value: "h2" },
-            { title: "H3", value: "h3" },
-            { title: "H4", value: "h4" },
+            { title: "Normálny", value: "normal" },
+            { title: "Nadpis 2", value: "h2" },
+            { title: "Nadpis 3", value: "h3" },
+            { title: "Nadpis 4", value: "h4" },
           ],
         },
         {
@@ -52,7 +52,7 @@ export const page = defineType({
           fields: [
             {
               name: "alt",
-              title: "Alternativtext",
+              title: "Popis obrázka",
               type: "string",
             },
           ],

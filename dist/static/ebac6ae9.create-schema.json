@@ -1,0 +1,653 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Názov stránky"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "URL adresa"
+      },
+      {
+        "description": "Prepíše názov stránky vo vyhľadávačoch",
+        "name": "seoTitle",
+        "type": "string",
+        "title": "SEO titulok"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 160
+              }
+            ]
+          }
+        ],
+        "description": "Meta popis pre vyhľadávače (max. 160 znakov)",
+        "name": "seoDescription",
+        "type": "text",
+        "title": "SEO popis"
+      },
+      {
+        "of": [
+          {
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "level": "error",
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "of": [],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normálny"
+              },
+              {
+                "value": "h2",
+                "title": "Nadpis 2"
+              },
+              {
+                "value": "h3",
+                "title": "Nadpis 3"
+              },
+              {
+                "value": "h4",
+                "title": "Nadpis 4"
+              }
+            ],
+            "type": "block"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "fields": [
+              {
+                "name": "alt",
+                "type": "string",
+                "title": "Popis obrázka"
+              }
+            ],
+            "type": "image"
+          }
+        ],
+        "name": "content",
+        "type": "array",
+        "title": "Obsah"
+      }
+    ],
+    "name": "page",
+    "type": "document",
+    "title": "Stránky"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titulok"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "URL adresa"
+      },
+      {
+        "rows": 3,
+        "description": "Zobrazí sa v prehľade blogu a ako meta popis",
+        "name": "excerpt",
+        "type": "text",
+        "title": "Krátky popis"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Popis obrázka"
+          }
+        ],
+        "name": "mainImage",
+        "type": "image",
+        "title": "Hlavný obrázok"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Náklady a dotácie",
+              "value": "kosten-foerderung"
+            },
+            {
+              "title": "Technika",
+              "value": "technik"
+            },
+            {
+              "title": "Poradca",
+              "value": "ratgeber"
+            },
+            {
+              "title": "Aktuality",
+              "value": "aktuelles"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "Kategória"
+      },
+      {
+        "name": "publishedAt",
+        "type": "datetime",
+        "title": "Dátum zverejnenia"
+      },
+      {
+        "of": [
+          {
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "level": "error",
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "of": [],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normálny"
+              },
+              {
+                "value": "h2",
+                "title": "Nadpis 2"
+              },
+              {
+                "value": "h3",
+                "title": "Nadpis 3"
+              },
+              {
+                "value": "blockquote",
+                "title": "Citát"
+              }
+            ],
+            "type": "block"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "fields": [
+              {
+                "name": "alt",
+                "type": "string",
+                "title": "Popis obrázka"
+              },
+              {
+                "name": "caption",
+                "type": "string",
+                "title": "Popis pod obrázkom"
+              }
+            ],
+            "type": "image"
+          }
+        ],
+        "name": "body",
+        "type": "array",
+        "title": "Obsah článku"
+      }
+    ],
+    "name": "post",
+    "type": "document",
+    "title": "Blog články"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Názov služby"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "URL adresa"
+      },
+      {
+        "rows": 4,
+        "name": "description",
+        "type": "text",
+        "title": "Popis"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Popis obrázka"
+          }
+        ],
+        "name": "image",
+        "type": "image",
+        "title": "Obrázok"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "features",
+        "type": "array",
+        "title": "Výhody / Body"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Poradie"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Služby"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "question",
+        "type": "string",
+        "title": "Otázka"
+      },
+      {
+        "rows": 5,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "answer",
+        "type": "text",
+        "title": "Odpoveď"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Náklady a dotácie",
+              "value": "kosten-foerderung"
+            },
+            {
+              "title": "Inštalácia a technika",
+              "value": "installation-technik"
+            },
+            {
+              "title": "Servis a priebeh",
+              "value": "service-ablauf"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "Kategória"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Poradie"
+      }
+    ],
+    "name": "faq",
+    "type": "document",
+    "title": "Časté otázky"
+  },
+  {
+    "fields": [
+      {
+        "name": "companyName",
+        "type": "string",
+        "title": "Názov firmy"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "title": "Telefónne číslo"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "title": "E-mail"
+      },
+      {
+        "rows": 3,
+        "name": "address",
+        "type": "text",
+        "title": "Adresa"
+      },
+      {
+        "name": "openingHours",
+        "type": "string",
+        "title": "Otváracie hodiny"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "facebook",
+        "type": "url",
+        "title": "Facebook URL"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "instagram",
+        "type": "url",
+        "title": "Instagram URL"
+      },
+      {
+        "name": "seoDefaultTitle",
+        "type": "string",
+        "title": "Predvolený SEO titulok"
+      },
+      {
+        "rows": 3,
+        "name": "seoDefaultDescription",
+        "type": "text",
+        "title": "Predvolený SEO popis"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document",
+    "title": "Nastavenia webu"
+  }
+]

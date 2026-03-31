@@ -13,16 +13,16 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
-          .title("Inhalt")
+          .title("Obsah")
           .items([
             S.listItem()
-              .title("Website-Einstellungen")
+              .title("Nastavenia webu")
               .child(S.document().schemaType("siteSettings").documentId("siteSettings")),
             S.divider(),
-            S.documentTypeListItem("page").title("Seiten"),
-            S.documentTypeListItem("post").title("Blog-Beiträge"),
-            S.documentTypeListItem("service").title("Leistungen"),
-            S.documentTypeListItem("faq").title("FAQ"),
+            S.documentTypeListItem("page").title("Stránky"),
+            S.documentTypeListItem("post").title("Blog články"),
+            S.documentTypeListItem("service").title("Služby"),
+            S.documentTypeListItem("faq").title("Časté otázky"),
           ]),
     }),
     visionTool(),

@@ -2,55 +2,55 @@ import { defineField, defineType } from "sanity";
 
 export const service = defineType({
   name: "service",
-  title: "Leistungen",
+  title: "Služby",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Titel",
+      title: "Názov služby",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "URL-Slug",
+      title: "URL adresa",
       type: "slug",
       options: { source: "title", maxLength: 96 },
     }),
     defineField({
       name: "description",
-      title: "Beschreibung",
+      title: "Popis",
       type: "text",
       rows: 4,
     }),
     defineField({
       name: "image",
-      title: "Bild",
+      title: "Obrázok",
       type: "image",
       options: { hotspot: true },
       fields: [
         {
           name: "alt",
-          title: "Alternativtext",
+          title: "Popis obrázka",
           type: "string",
         },
       ],
     }),
     defineField({
       name: "features",
-      title: "Vorteile / Features",
+      title: "Výhody / Body",
       type: "array",
       of: [{ type: "string" }],
     }),
     defineField({
       name: "order",
-      title: "Reihenfolge",
+      title: "Poradie",
       type: "number",
     }),
   ],
   orderings: [
     {
-      title: "Reihenfolge",
+      title: "Podľa poradia",
       name: "orderAsc",
       by: [{ field: "order", direction: "asc" }],
     },

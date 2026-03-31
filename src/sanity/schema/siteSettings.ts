@@ -2,33 +2,33 @@ import { defineField, defineType } from "sanity";
 
 export const siteSettings = defineType({
   name: "siteSettings",
-  title: "Website-Einstellungen",
+  title: "Nastavenia webu",
   type: "document",
   fields: [
     defineField({
       name: "companyName",
-      title: "Firmenname",
+      title: "Názov firmy",
       type: "string",
     }),
     defineField({
       name: "phone",
-      title: "Telefonnummer",
+      title: "Telefónne číslo",
       type: "string",
     }),
     defineField({
       name: "email",
-      title: "E-Mail",
+      title: "E-mail",
       type: "string",
     }),
     defineField({
       name: "address",
-      title: "Adresse",
+      title: "Adresa",
       type: "text",
       rows: 3,
     }),
     defineField({
       name: "openingHours",
-      title: "Öffnungszeiten",
+      title: "Otváracie hodiny",
       type: "string",
     }),
     defineField({
@@ -43,19 +43,19 @@ export const siteSettings = defineType({
     }),
     defineField({
       name: "seoDefaultTitle",
-      title: "Standard SEO-Titel",
+      title: "Predvolený SEO titulok",
       type: "string",
     }),
     defineField({
       name: "seoDefaultDescription",
-      title: "Standard SEO-Beschreibung",
+      title: "Predvolený SEO popis",
       type: "text",
       rows: 3,
     }),
   ],
   preview: {
     prepare() {
-      return { title: "Website-Einstellungen" };
+      return { title: "Nastavenia webu" };
     },
   },
 });

@@ -2,72 +2,72 @@ import { defineField, defineType } from "sanity";
 
 export const post = defineType({
   name: "post",
-  title: "Blog-Beiträge",
+  title: "Blog články",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Titel",
+      title: "Titulok",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "URL-Slug",
+      title: "URL adresa",
       type: "slug",
       options: { source: "title", maxLength: 96 },
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "excerpt",
-      title: "Kurzbeschreibung",
+      title: "Krátky popis",
       type: "text",
       rows: 3,
-      description: "Wird in der Blog-Übersicht und als Meta-Beschreibung angezeigt",
+      description: "Zobrazí sa v prehľade blogu a ako meta popis",
     }),
     defineField({
       name: "mainImage",
-      title: "Beitragsbild",
+      title: "Hlavný obrázok",
       type: "image",
       options: { hotspot: true },
       fields: [
         {
           name: "alt",
-          title: "Alternativtext",
+          title: "Popis obrázka",
           type: "string",
         },
       ],
     }),
     defineField({
       name: "category",
-      title: "Kategorie",
+      title: "Kategória",
       type: "string",
       options: {
         list: [
-          { title: "Kosten & Förderung", value: "kosten-foerderung" },
-          { title: "Technik", value: "technik" },
-          { title: "Ratgeber", value: "ratgeber" },
-          { title: "Aktuelles", value: "aktuelles" },
+          { title: "Náklady a dotácie", value: "kosten-foerderung" },
+          { title: "Technika", value: "technik" },
+          { title: "Poradca", value: "ratgeber" },
+          { title: "Aktuality", value: "aktuelles" },
         ],
       },
     }),
     defineField({
       name: "publishedAt",
-      title: "Veröffentlicht am",
+      title: "Dátum zverejnenia",
       type: "datetime",
     }),
     defineField({
       name: "body",
-      title: "Inhalt",
+      title: "Obsah článku",
       type: "array",
       of: [
         {
           type: "block",
           styles: [
-            { title: "Normal", value: "normal" },
-            { title: "H2", value: "h2" },
-            { title: "H3", value: "h3" },
-            { title: "Zitat", value: "blockquote" },
+            { title: "Normálny", value: "normal" },
+            { title: "Nadpis 2", value: "h2" },
+            { title: "Nadpis 3", value: "h3" },
+            { title: "Citát", value: "blockquote" },
           ],
         },
         {
@@ -76,12 +76,12 @@ export const post = defineType({
           fields: [
             {
               name: "alt",
-              title: "Alternativtext",
+              title: "Popis obrázka",
               type: "string",
             },
             {
               name: "caption",
-              title: "Bildunterschrift",
+              title: "Popis pod obrázkom",
               type: "string",
             },
           ],
@@ -91,7 +91,7 @@ export const post = defineType({
   ],
   orderings: [
     {
-      title: "Veröffentlicht (neueste zuerst)",
+      title: "Najnovšie",
       name: "publishedAtDesc",
       by: [{ field: "publishedAt", direction: "desc" }],
     },
@@ -102,7 +102,7 @@ export const post = defineType({
       return {
         title,
         media,
-        subtitle: date ? new Date(date).toLocaleDateString("de-DE") : "Entwurf",
+        subtitle: date ? new Date(date).toLocaleDateString("sk-SK") : "Koncept",
       };
     },
   },
