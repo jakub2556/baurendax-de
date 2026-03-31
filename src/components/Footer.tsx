@@ -38,7 +38,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Baurendax"
               width={160}
               height={53}
@@ -77,7 +77,7 @@ export function Footer() {
           {/* Link columns */}
           {footerLinks.map((group) => (
             <div key={group.title}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/70 mb-4">
                 {group.title}
               </h3>
               <ul className="space-y-3">
@@ -98,10 +98,10 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/70">
             &copy; {new Date().getFullYear()} Baurendax. Alle Rechte vorbehalten.
           </p>
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/70">
             Webdesign von{" "}
             <a
               href="https://eweby.eu"

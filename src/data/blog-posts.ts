@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     title: "Wärmepumpe Kosten 2026: Was kostet eine Wärmepumpe wirklich?",
     excerpt:
       "Alle Kosten im Überblick: Anschaffung, Installation, Betrieb und Wartung. Plus: aktuelle Fördermöglichkeiten, die Ihre Investition deutlich reduzieren.",
-    image: "/images/Preis-1024x683.png",
+    image: "/images/Preis-1024x683.webp",
     date: "15. März 2026",
     category: "Kosten & Förderung",
     readTime: "8 Min.",
@@ -84,7 +84,7 @@ Lassen Sie sich individuell beraten! Die tatsächlichen Kosten hängen von viele
     title: "Wärmepumpe im Altbau: Funktioniert das wirklich?",
     excerpt:
       "Moderne Wärmepumpen eignen sich hervorragend für Altbauten. Erfahren Sie, worauf Sie achten müssen und welche Lösung zu Ihrem Gebäude passt.",
-    image: "/images/ChatGPT-Image-3.-3.-2026-15_18_14.png",
+    image: "/images/ChatGPT-Image-3.-3.-2026-15_18_14.webp",
     date: "8. März 2026",
     category: "Technik",
     readTime: "6 Min.",
@@ -136,7 +136,7 @@ Der Altbau ist kein Hindernis für eine Wärmepumpe — er ist eine Chance. Mit 
     title: "Förderung Heizungstausch 2026: Bis zu 70% Zuschuss sichern",
     excerpt:
       "Die aktuellen Förderprogramme der KfW und BAFA im Überblick. So beantragen Sie die maximale Förderung für Ihre neue Wärmepumpe.",
-    image: "/images/Fotka-domu.png",
+    image: "/images/Fotka-domu.webp",
     date: "1. März 2026",
     category: "Kosten & Förderung",
     readTime: "7 Min.",
@@ -210,7 +210,7 @@ Kontaktieren Sie uns für eine kostenlose Förderberatung!
     title: "GEG 2026: Was das neue Heizungsgesetz für Hausbesitzer bedeutet",
     excerpt:
       "Ab Juli 2026 gelten verschärfte Anforderungen an Heizungen. Was das GEG für Sie bedeutet, wann Sie handeln müssen und wie Sie die maximale Förderung sichern.",
-    image: "/images/ChatGPT-Image-18.-3.-2026-20_32_36.png",
+    image: "/images/ChatGPT-Image-18.-3.-2026-20_32_36.webp",
     date: "28. März 2026",
     category: "Aktuelles",
     readTime: "7 Min.",
@@ -271,7 +271,7 @@ Warten Sie nicht auf den letzten Moment. Lassen Sie sich jetzt beraten — koste
     title: "Wärmepumpe Lautstärke & Abstand zum Nachbarn: Regeln 2026",
     excerpt:
       "Wie laut ist eine Wärmepumpe wirklich? Welchen Abstand zum Nachbarn braucht sie? Alle Regeln, Grenzwerte und Tipps für eine störungsfreie Installation.",
-    image: "/images/ChatGPT-Image-23.-3.-2026-13_29_06.png",
+    image: "/images/ChatGPT-Image-23.-3.-2026-13_29_06.webp",
     date: "25. März 2026",
     category: "Technik",
     readTime: "6 Min.",

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand. Bis zu 70% KfW-Förderung. Jetzt kostenlos anfragen!",
     images: [
       {
-        url: "https://baurendax.de/images/Fotka-domu.png",
+        url: "https://baurendax.de/images/Fotka-domu.webp",
         width: 1200,
         height: 630,
         alt: "Baurendax – Wärmepumpen-Installation",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Baurendax – Wärmepumpe installieren lassen",
     description: "Professionelle Wärmepumpen-Installation in ganz Deutschland. Bis zu 70% Förderung.",
-    images: ["https://baurendax.de/images/Fotka-domu.png"],
+    images: ["https://baurendax.de/images/Fotka-domu.webp"],
   },
   robots: {
     index: true,

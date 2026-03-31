@@ -45,7 +45,7 @@ export default function UeberUns() {
             </div>
             <div className="rounded-2xl overflow-hidden">
               <Image
-                src="/images/ChatGPT-Image-18.-3.-2026-20_32_36.png"
+                src="/images/ChatGPT-Image-18.-3.-2026-20_32_36.webp"
                 alt="Das Baurendax Team"
                 width={600}
                 height={400}

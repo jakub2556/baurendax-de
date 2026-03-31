@@ -16,7 +16,7 @@ export const services: Service[] = [
     shortDescription: "Kostenlose Erstberatung und detaillierte technische Analyse vor Ort.",
     description:
       "Unsere Experten kommen zu Ihnen vor Ort und beurteilen die Gegebenheiten. Gemeinsam finden wir die optimale Wärmepumpen-Lösung für Ihr Gebäude — ob Neubau oder Altbau. Die Beratung ist selbstverständlich kostenlos und unverbindlich.",
-    image: "/images/Roztiahnute-sluzby-1024x683.png",
+    image: "/images/Roztiahnute-sluzby-1024x683.webp",
     features: [
       "Kostenlose Erstberatung ohne Verpflichtung",
       "Vor-Ort-Begehung und Gebäudeanalyse",
@@ -43,7 +43,7 @@ export const services: Service[] = [
     shortDescription: "Fachgerechte Lieferung und professionelle Montage durch zertifizierte Techniker.",
     description:
       "Wir liefern hochwertige Marken-Wärmepumpen und installieren diese fachgerecht. Unsere zertifizierten Techniker sorgen für eine saubere, termingerechte Montage — zum garantierten Festpreis.",
-    image: "/images/service-1024x683.png",
+    image: "/images/service-1024x683.webp",
     features: [
       "Markengeräte von Viessmann, Bosch & Co.",
       "Zertifizierte Montage-Techniker",
@@ -70,7 +70,7 @@ export const services: Service[] = [
     shortDescription: "Komplettumbau von Öl, Gas oder Elektro auf eine effiziente Wärmepumpe.",
     description:
       "Sie heizen noch mit Öl, Gas oder Elektro? Wir rüsten Ihre bestehende Heizungsanlage komplett auf eine moderne Wärmepumpe um. Inklusive Demontage der alten Anlage und fachgerechter Entsorgung.",
-    image: "/images/Preis-1024x683.png",
+    image: "/images/Preis-1024x683.webp",
     features: [
       "Demontage der alten Heizungsanlage",
       "Fachgerechte Entsorgung der Altgeräte",
@@ -97,7 +97,7 @@ export const services: Service[] = [
     shortDescription: "Regelmäßige Wartung und schneller Service für störungsfreien Betrieb.",
     description:
       "Damit Ihre Wärmepumpe langfristig effizient arbeitet, bieten wir Wartungsverträge und schnellen Service im Störungsfall. Prävention statt Reparatur — so sparen Sie langfristig.",
-    image: "/images/Udrzba-v-technickej-miestnosti.png",
+    image: "/images/Udrzba-v-technickej-miestnosti.webp",
     features: [
       "Jährliche Inspektion und Wartung",
       "Schneller Notfall-Service",

@@ -4,12 +4,12 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { LightboxGallery } from "@/components/Lightbox";
 
 const galleryImages = [
-  { src: "/images/IMG20251104143313-scaled.jpg", alt: "Wärmepumpe Installation" },
-  { src: "/images/IMG20251109155056-1-scaled.jpg", alt: "Wärmepumpe Montage" },
-  { src: "/images/IMG20251101120210-scaled.jpg", alt: "Außeneinheit Installation" },
-  { src: "/images/IMG20250930173005-scaled.jpg", alt: "Fertige Wärmepumpe" },
-  { src: "/images/IMG20251009202259-scaled.jpg", alt: "Technikraum" },
-  { src: "/images/IMG20251104135953-scaled.jpg", alt: "Wärmepumpe Service" },
+  { src: "/images/IMG20251104143313.webp", alt: "Wärmepumpe Installation" },
+  { src: "/images/IMG20251109155056-1.webp", alt: "Wärmepumpe Montage" },
+  { src: "/images/IMG20251101120210.webp", alt: "Außeneinheit Installation" },
+  { src: "/images/IMG20250930173005.webp", alt: "Fertige Wärmepumpe" },
+  { src: "/images/IMG20251009202259.webp", alt: "Technikraum" },
+  { src: "/images/IMG20251104135953.webp", alt: "Wärmepumpe Service" },
 ];
 
 export function GallerySection() {
