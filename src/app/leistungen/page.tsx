@@ -4,9 +4,10 @@ import Link from "next/link";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Leistungen – Wärmepumpen-Installation & Service",
+  title: "Wärmepumpe installieren lassen – Beratung, Montage & Wartung",
   description:
-    "Unsere Leistungen: Beratung, technische Planung, Lieferung, Installation und Wartung von Wärmepumpen in ganz Deutschland.",
+    "Wärmepumpe installieren lassen vom Fachbetrieb ✓ Beratung & Begehung ✓ Lieferung & Montage ✓ Heizungsumrüstung ✓ Wartung & Service ✓ Deutschlandweit zum Festpreis",
+  alternates: { canonical: "https://baurendax.de/leistungen" },
 };
 
 export default function Leistungen() {

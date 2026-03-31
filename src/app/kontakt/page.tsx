@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
 
 export const metadata: Metadata = {
-  title: "Kontakt – Kostenlose Beratung anfragen",
+  title: "Wärmepumpe Angebot anfordern – Kostenlose Beratung",
   description:
-    "Kontaktieren Sie Baurendax für eine kostenlose Beratung und ein unverbindliches Angebot für Ihre Wärmepumpe. Deutschlandweit.",
+    "Jetzt kostenloses Wärmepumpen-Angebot anfordern ✓ Festpreisgarantie ✓ Beratung vor Ort ✓ Antwort in 24h ✓ Bis zu 70% KfW-Förderung ✓ Deutschlandweit",
+  alternates: { canonical: "https://baurendax.de/kontakt" },
 };
 
 export default function Kontakt() {

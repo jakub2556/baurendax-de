@@ -3,6 +3,7 @@ import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { OrganizationSchema } from "@/components/StructuredData";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -18,32 +19,46 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Baurendax – Ihr Experte für Wärmepumpen in Deutschland",
-    template: "%s | Baurendax",
+    default: "Baurendax – Wärmepumpe installieren lassen | Deutschlandweit",
+    template: "%s | Baurendax Wärmepumpen",
   },
   description:
-    "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand. Jetzt kostenlos anfragen!",
-  keywords: [
-    "Wärmepumpe",
-    "Wärmepumpe installieren",
-    "Heizung umrüsten",
-    "Wärmepumpe Kosten",
-    "Wärmepumpe Deutschland",
-    "Heizungstausch",
-    "Wärmepumpe Förderung",
-  ],
-  authors: [{ name: "Baurendax" }],
+    "Wärmepumpe installieren lassen vom Fachbetrieb ✓ Beratung, Planung & Montage aus einer Hand ✓ Bis zu 70% Förderung ✓ Festpreisgarantie ✓ Deutschlandweit",
   openGraph: {
     type: "website",
     locale: "de_DE",
     siteName: "Baurendax",
-    title: "Baurendax – Ihr Experte für Wärmepumpen",
+    title: "Baurendax – Wärmepumpe installieren lassen | Fachbetrieb Deutschland",
     description:
-      "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand.",
+      "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand. Bis zu 70% KfW-Förderung. Jetzt kostenlos anfragen!",
+    images: [
+      {
+        url: "https://baurendax.de/images/Fotka-domu.png",
+        width: 1200,
+        height: 630,
+        alt: "Baurendax – Wärmepumpen-Installation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Baurendax – Wärmepumpe installieren lassen",
+    description: "Professionelle Wärmepumpen-Installation in ganz Deutschland. Bis zu 70% Förderung.",
+    images: ["https://baurendax.de/images/Fotka-domu.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://baurendax.de",
   },
   metadataBase: new URL("https://baurendax.de"),
 };
@@ -59,6 +74,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <OrganizationSchema />
       </body>
     </html>
   );

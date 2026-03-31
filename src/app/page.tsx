@@ -489,26 +489,25 @@ export default function Home() {
       {/* === CTA / CONTACT FORM === */}
       <ContactFormSection />
 
-      {/* JSON-LD Structured Data */}
+      {/* Homepage-specific WebPage schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Baurendax",
-            description: "Professionelle Wärmepumpen-Installation in ganz Deutschland",
+            "@type": "WebPage",
+            name: "Baurendax – Wärmepumpe installieren lassen",
+            description: "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand.",
             url: "https://baurendax.de",
-            logo: "https://baurendax.de/images/logo.png",
-            image: "https://baurendax.de/images/Fotka-domu.png",
-            areaServed: { "@type": "Country", name: "Deutschland" },
-            serviceType: [
-              "Wärmepumpen-Installation",
-              "Heizungsumrüstung",
-              "Heizungsberatung",
-              "Wärmepumpen-Wartung",
+            isPartOf: { "@id": "https://baurendax.de/#organization" },
+            about: [
+              { "@type": "Thing", name: "Wärmepumpe" },
+              { "@type": "Thing", name: "Wärmepumpe installieren" },
+              { "@type": "Thing", name: "Heizungstausch" },
+              { "@type": "Thing", name: "Wärmepumpe Förderung 2026" },
+              { "@type": "Thing", name: "Wärmepumpe Altbau" },
+              { "@type": "Thing", name: "Heizungsumrüstung" },
             ],
-            priceRange: "€€",
           }),
         }}
       />

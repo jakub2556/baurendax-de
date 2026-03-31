@@ -205,6 +205,155 @@ Wir unterstützen Sie bei jedem Schritt:
 Kontaktieren Sie uns für eine kostenlose Förderberatung!
     `,
   },
+  {
+    slug: "geg-heizungsgesetz-2026",
+    title: "GEG 2026: Was das neue Heizungsgesetz für Hausbesitzer bedeutet",
+    excerpt:
+      "Ab Juli 2026 gelten verschärfte Anforderungen an Heizungen. Was das GEG für Sie bedeutet, wann Sie handeln müssen und wie Sie die maximale Förderung sichern.",
+    image: "/images/ChatGPT-Image-18.-3.-2026-20_32_36.png",
+    date: "28. März 2026",
+    category: "Aktuelles",
+    readTime: "7 Min.",
+    content: `
+## GEG 2026: Was ändert sich beim Heizungsgesetz?
+
+Das Gebäudeenergiegesetz (GEG) wird 2026 weiter verschärft. Für Hausbesitzer in Deutschland bedeutet das: Wer jetzt noch mit Öl oder Gas heizt, muss handeln. Wir erklären, was auf Sie zukommt.
+
+### Die wichtigsten Änderungen ab Juli 2026
+
+**1. 65-Prozent-Regel wird Pflicht**
+Neue Heizungen müssen mindestens 65% erneuerbare Energien nutzen. Eine Wärmepumpe erfüllt diese Anforderung automatisch.
+
+**2. Kommunale Wärmeplanung**
+Bis Mitte 2026 müssen Großstädte (über 100.000 Einwohner) ihre Wärmeplanung vorlegen. Danach wissen Sie, ob in Ihrem Gebiet ein Wärmenetz geplant ist — oder ob eine Wärmepumpe die beste Option ist.
+
+**3. Übergangsfristen beachten**
+- **Bestehende Heizungen** dürfen weiterlaufen, solange sie funktionieren
+- **Bei Totalausfall** muss innerhalb von 5 Jahren auf 65% erneuerbare Energien umgestellt werden
+- **Neubauten** in Neubaugebieten müssen die 65%-Regel sofort erfüllen
+
+### Was bedeutet das für Ihre alte Heizung?
+
+**Ölheizung:** Kein sofortiges Verbot, aber keine Neuinstallation mehr möglich. Bei Ausfall muss auf erneuerbare Energien umgestellt werden. Jetzt tauschen = maximale Förderung (Klimabonus +20%).
+
+**Gasheizung:** Ähnliche Regelung. Gasheizungen über 20 Jahre erhalten beim Tausch den Klimabonus. Jetzt handeln lohnt sich finanziell am meisten.
+
+**Nachtspeicherheizung:** Besonders ineffizient und teuer im Betrieb. Der Umstieg auf eine Wärmepumpe senkt die Heizkosten drastisch.
+
+### Warum jetzt der beste Zeitpunkt ist
+
+**1. Maximale Förderung sichern**
+Die aktuelle KfW-Förderung bietet bis zu 70% Zuschuss. Es ist nicht garantiert, dass diese Sätze dauerhaft bleiben.
+
+**2. Vorlaufzeit einplanen**
+Von der Beratung bis zur fertigen Installation vergehen 4-8 Wochen. Wer bis Juli 2026 umrüsten will, sollte jetzt starten.
+
+**3. Steigende Nachfrage**
+Mit dem GEG-Stichtag wird die Nachfrage nach Wärmepumpen-Installateuren stark steigen. Wer früh handelt, bekommt schnellere Termine.
+
+### Förderung: So viel Zuschuss gibt es 2026
+
+| Förderung | Prozentsatz |
+|-----------|-----------|
+| Grundförderung | 30% |
+| Klimabonus (Öl/Gas-Austausch) | +20% |
+| Einkommensbonus (unter 40.000 € Einkommen) | +30% |
+| Effizienzbonus (R290 Kältemittel) | +5% |
+| **Maximale Förderung** | **70%** |
+
+### Unser Rat
+
+Warten Sie nicht auf den letzten Moment. Lassen Sie sich jetzt beraten — kostenlos und unverbindlich. Wir prüfen Ihre Förderfähigkeit und erstellen ein Festpreisangebot, damit Sie genau wissen, was Ihre neue Heizung nach Abzug aller Förderungen kostet.
+    `,
+  },
+  {
+    slug: "waermepumpe-lautstaerke-abstand",
+    title: "Wärmepumpe Lautstärke & Abstand zum Nachbarn: Regeln 2026",
+    excerpt:
+      "Wie laut ist eine Wärmepumpe wirklich? Welchen Abstand zum Nachbarn braucht sie? Alle Regeln, Grenzwerte und Tipps für eine störungsfreie Installation.",
+    image: "/images/ChatGPT-Image-23.-3.-2026-13_29_06.png",
+    date: "25. März 2026",
+    category: "Technik",
+    readTime: "6 Min.",
+    content: `
+## Wie laut ist eine Wärmepumpe?
+
+Eine der häufigsten Fragen bei der Planung einer Wärmepumpe: Wie laut wird das? Und welchen Abstand muss ich zum Nachbargrundstück einhalten? Hier finden Sie alle Fakten.
+
+### Lautstärke moderner Wärmepumpen
+
+Moderne Luft-Wasser-Wärmepumpen arbeiten mit einem Schallleistungspegel von **35 bis 60 dB(A)**. Zum Vergleich:
+
+- **35 dB** — leises Flüstern
+- **40 dB** — ruhige Bibliothek
+- **45 dB** — Kühlschrank
+- **50 dB** — leises Gespräch
+- **55 dB** — normaler Regen
+- **60 dB** — normales Gespräch
+
+Die meisten aktuellen Modelle von Viessmann, Bosch oder Daikin liegen im Normalbetrieb bei **40-50 dB(A)** an der Quelle. In 3 Metern Entfernung sind es nur noch ca. 30-35 dB(A).
+
+### Gesetzliche Grenzwerte (TA Lärm)
+
+In Deutschland gelten die Immissionsrichtwerte der TA Lärm:
+
+| Gebiet | Tags (6-22 Uhr) | Nachts (22-6 Uhr) |
+|--------|-----------------|-------------------|
+| Reines Wohngebiet | 50 dB(A) | 35 dB(A) |
+| Allgemeines Wohngebiet | 55 dB(A) | 40 dB(A) |
+| Mischgebiet | 60 dB(A) | 45 dB(A) |
+
+**Wichtig:** Der Grenzwert gilt am Immissionsort — also am nächsten Fenster des Nachbarn, nicht an der Wärmepumpe selbst.
+
+### Abstandsregeln nach Bundesland
+
+Die Abstandsregeln variieren je nach Bundesland. Eine bundesweite Mindestabstandsregelung gibt es nicht. Grundsätzlich gilt:
+
+**Bauordnungsrechtliche Abstände:**
+- Die meisten Bundesländer fordern **3 Meter** Abstand zur Grundstücksgrenze für Gebäude und bauliche Anlagen
+- Wärmepumpen fallen als technische Anlagen oft unter Sonderregelungen
+- In einigen Bundesländern sind Wärmepumpen in der Abstandsfläche privilegiert
+
+**Empfohlene Mindestabstände:**
+- **3 Meter** zur Grundstücksgrenze (als Faustregel)
+- **5 Meter** zum nächsten Schlafzimmerfenster des Nachbarn
+- Aufstellung möglichst **nicht direkt an der Grundstücksgrenze** zum Nachbarn
+
+### 7 Tipps für eine leise Wärmepumpe
+
+**1. Leises Modell wählen**
+Achten Sie bei der Auswahl auf den Schallleistungspegel. Moderne Geräte bieten oft einen "Silent Mode" mit unter 40 dB(A).
+
+**2. Aufstellort clever wählen**
+Nicht direkt vor dem Schlafzimmerfenster des Nachbarn. Idealerweise auf der straßenzugewandten Seite.
+
+**3. Schallschutzhaube**
+Spezielle Einhausungen können den Schallpegel um 5-10 dB(A) senken.
+
+**4. Schwingungsdämpfer**
+Die Wärmepumpe auf schwingungsdämpfenden Sockeln montieren, um Körperschall zu vermeiden.
+
+**5. Abstand halten**
+Je weiter weg von der Grundstücksgrenze, desto leiser. Pro Verdopplung des Abstands sinkt der Pegel um ca. 6 dB.
+
+**6. Schallreflexionen vermeiden**
+Nicht in Ecken oder zwischen Hauswänden aufstellen — das verstärkt den Schall.
+
+**7. Nachtmodus aktivieren**
+Viele Wärmepumpen bieten einen automatischen Nachtmodus mit reduzierter Leistung und Lautstärke.
+
+### Was tun bei Nachbarbeschwerden?
+
+- **Gespräch suchen:** Oft hilft ein freundliches Gespräch
+- **Schallgutachten:** Ein Akustiker kann den tatsächlichen Immissionspegel messen
+- **Nachrüstung:** Schallschutzhaube oder Versetzung der Anlage
+- **Rechtsberatung:** Im Streitfall gilt die TA Lärm als Maßstab
+
+### Fazit
+
+Moderne Wärmepumpen sind leiser als ihr Ruf. Mit der richtigen Planung und Aufstellung gibt es in den allermeisten Fällen keinerlei Probleme mit Nachbarn. Wir beraten Sie bei der optimalen Aufstellung — kostenlos und vor Ort.
+    `,
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

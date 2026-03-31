@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Über uns – Wer steckt hinter Baurendax",
+  title: "Über Baurendax – Wärmepumpen-Fachbetrieb Deutschland",
   description:
-    "Lernen Sie das Team hinter Baurendax kennen. Erfahrung, Kompetenz und Leidenschaft für Wärmepumpen — deutschlandweit.",
+    "Baurendax: Ihr zertifizierter Wärmepumpen-Fachbetrieb ✓ Erfahrenes Team ✓ Deutschlandweiter Service ✓ Viessmann & Bosch Partner ✓ Festpreisgarantie",
+  alternates: { canonical: "https://baurendax.de/ueber-uns" },
 };
 
 export default function UeberUns() {

@@ -1,0 +1,30 @@
+# Baurendax — Ihr Experte für Wärmepumpen in Deutschland
+
+> Baurendax ist ein deutschlandweiter Fachbetrieb für Wärmepumpen-Installation, Heizungsumrüstung und Wartung. Wir bieten Beratung, Planung, Lieferung und Installation aus einer Hand.
+
+## Hauptseiten
+
+- [Startseite](https://baurendax.de): Übersicht über unsere Leistungen und Services
+- [Leistungen](https://baurendax.de/leistungen): Alle Dienstleistungen im Überblick
+- [Beratung & Begehung](https://baurendax.de/leistungen/beratung): Kostenlose Erstberatung vor Ort
+- [Installation](https://baurendax.de/leistungen/installation): Fachgerechte Wärmepumpen-Montage
+- [Heizungsumrüstung](https://baurendax.de/leistungen/umruestung): Umstieg von Öl/Gas auf Wärmepumpe
+- [Wartung & Service](https://baurendax.de/leistungen/wartung): Regelmäßige Wartung und Notfall-Service
+- [Über uns](https://baurendax.de/ueber-uns): Unser Team und unsere Werte
+- [FAQ](https://baurendax.de/faq): Häufig gestellte Fragen zu Wärmepumpen
+- [Kontakt](https://baurendax.de/kontakt): Kostenlose Beratung anfragen
+
+## Blog / Ratgeber
+
+- [Wärmepumpe Kosten 2026](https://baurendax.de/blog/waermepumpe-kosten-2026): Alle Kosten, Förderungen und Rechenbeispiele
+- [Wärmepumpe im Altbau](https://baurendax.de/blog/waermepumpe-altbau): Funktioniert das? Ratgeber mit Praxisbeispiel
+- [Förderung Heizungstausch 2026](https://baurendax.de/blog/foerderung-heizungstausch): KfW-Zuschuss bis 70%
+- [GEG 2026: Das neue Heizungsgesetz](https://baurendax.de/blog/geg-heizungsgesetz-2026): Was Hausbesitzer wissen müssen
+- [Wärmepumpe Lautstärke & Abstand](https://baurendax.de/blog/waermepumpe-lautstaerke-abstand): Regeln und Nachbarschaftsrecht
+
+## Kontakt
+
+- Website: https://baurendax.de
+- E-Mail: info@baurendax.de
+- Servicegebiet: Ganz Deutschland
+- Leistungen: Wärmepumpen-Installation, Heizungsumrüstung, Beratung, Wartung

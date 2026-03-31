@@ -8,28 +8,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://baurendax.de";
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${baseUrl}/leistungen`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/ueber-uns`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/kontakt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/impressum`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/datenschutz`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    {
+      url: baseUrl,
+      lastModified: new Date("2026-03-31"),
+      images: [`${baseUrl}/images/Fotka-domu.png`, `${baseUrl}/images/logo.png`],
+    },
+    {
+      url: `${baseUrl}/leistungen`,
+      lastModified: new Date("2026-03-31"),
+      images: services.map((s) => `${baseUrl}${s.image}`),
+    },
+    {
+      url: `${baseUrl}/ueber-uns`,
+      lastModified: new Date("2026-03-31"),
+      images: [`${baseUrl}/images/ChatGPT-Image-18.-3.-2026-20_32_36.png`],
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date("2026-03-31"),
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date("2026-03-31"),
+    },
+    {
+      url: `${baseUrl}/kontakt`,
+      lastModified: new Date("2026-03-31"),
+    },
+    {
+      url: `${baseUrl}/impressum`,
+      lastModified: new Date("2026-03-31"),
+    },
+    {
+      url: `${baseUrl}/datenschutz`,
+      lastModified: new Date("2026-03-31"),
+    },
   ];
-
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${baseUrl}/leistungen/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.8,
+    lastModified: new Date("2026-03-31"),
+    images: [`${baseUrl}${service.image}`],
+  }));
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date("2026-03-31"),
+    images: [`${baseUrl}${post.image}`],
   }));
 
   return [...staticPages, ...servicePages, ...blogPages];

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "FAQ – Häufig gestellte Fragen zu Wärmepumpen",
+  title: "Wärmepumpe FAQ – Kosten, Förderung, Altbau, Installation",
   description:
-    "Antworten auf die häufigsten Fragen zu Wärmepumpen: Kosten, Installation, Förderung, Altbau-Eignung und mehr.",
+    "Was kostet eine Wärmepumpe? Funktioniert sie im Altbau? Wie hoch ist die Förderung 2026? Alle Antworten vom Fachbetrieb ✓ Kosten ✓ KfW-Förderung ✓ Installation",
+  alternates: { canonical: "https://baurendax.de/faq" },
 };
 
 const faqs = [

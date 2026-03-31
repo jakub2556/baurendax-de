@@ -4,9 +4,10 @@ import Link from "next/link";
 import { blogPosts } from "@/data/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog – Ratgeber rund um Wärmepumpen",
+  title: "Wärmepumpe Ratgeber – Kosten, Förderung, Altbau & GEG 2026",
   description:
-    "Tipps, Ratgeber und aktuelle Informationen rund um Wärmepumpen, Förderungen und energieeffizientes Heizen.",
+    "Wärmepumpen-Ratgeber vom Fachbetrieb: Kosten 2026, KfW-Förderung bis 70%, Wärmepumpe im Altbau, GEG Heizungsgesetz. Expertenwissen für Hausbesitzer.",
+  alternates: { canonical: "https://baurendax.de/blog" },
 };
 
 export default function Blog() {
