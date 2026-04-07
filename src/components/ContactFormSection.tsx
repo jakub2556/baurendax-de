@@ -48,6 +48,9 @@ const stepImages = [
 
 export function ContactFormSection() {
   const [step, setStep] = useState(0);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [honey, setHoney] = useState("");
   const [form, setForm] = useState({
     heatingType: "",
     propertyType: "",
@@ -63,6 +66,24 @@ export function ContactFormSection() {
   const update = (field: string, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
+
+  async function handleSubmit() {
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, _honey: honey }),
+      });
+      if (!res.ok) throw new Error();
+      setStep(5);
+    } catch {
+      setError("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns an.");
+    } finally {
+      setSending(false);
+    }
+  }
 
   const totalSteps = 5;
 
@@ -273,11 +294,37 @@ export function ContactFormSection() {
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all resize-none"
           />
         </div>
+        {/* Honeypot — hidden from humans, catches bots */}
+        <input
+          type="text"
+          value={honey}
+          onChange={(e) => setHoney(e.target.value)}
+          className="absolute -left-[9999px]"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+        {error && (
+          <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
+            {error}
+          </div>
+        )}
         <button
-          onClick={() => setStep(5)}
-          className="w-full py-3.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors"
+          onClick={handleSubmit}
+          disabled={sending || !form.name || !form.email}
+          className="w-full py-3.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Kostenlos anfragen
+          {sending ? (
+            <span className="inline-flex items-center gap-2">
+              <svg className="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Wird gesendet...
+            </span>
+          ) : (
+            "Kostenlos anfragen"
+          )}
         </button>
         <p className="text-xs text-muted text-center">
           Ihre Daten werden vertraulich behandelt. Mehr dazu in unserer{" "}
