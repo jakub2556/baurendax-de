@@ -3,20 +3,16 @@
 import Script from "next/script";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+const GTM_ID = "GTM-W8WP7KRL";
 
 /**
  * Google Analytics 4 with Consent Mode v2 (DSGVO compliant)
- *
- * 1. Loads gtag.js but with consent DENIED by default
- * 2. CookieConsent component calls gtag('consent','update') when user accepts
- * 3. Only then GA4 starts collecting data
+ * + Google Tag Manager
  */
 export function GoogleAnalytics() {
-  if (!GA_ID) return null;
-
   return (
     <>
-      {/* Consent Mode v2 — default denied before gtag loads */}
+      {/* Consent Mode v2 — default denied before anything loads */}
       <Script id="ga-consent-default" strategy="beforeInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -31,19 +27,50 @@ export function GoogleAnalytics() {
         `}
       </Script>
 
-      {/* GA4 gtag.js */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga-config" strategy="afterInteractive">
+      {/* Google Tag Manager */}
+      <Script id="gtm-script" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_ID}');
         `}
       </Script>
+
+      {/* GA4 gtag.js */}
+      {GA_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga-config" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}');
+            `}
+          </Script>
+        </>
+      )}
     </>
+  );
+}
+
+/**
+ * GTM noscript — place at top of <body>
+ */
+export function GoogleTagManagerNoScript() {
+  return (
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+        height="0"
+        width="0"
+        style={{ display: "none", visibility: "hidden" }}
+      />
+    </noscript>
   );
 }

@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { OrganizationSchema } from "@/components/StructuredData";
-import { GoogleAnalytics } from "@/components/GoogleTagManager";
+import { GoogleAnalytics, GoogleTagManagerNoScript } from "@/components/GoogleTagManager";
 import { CookieConsent } from "@/components/CookieConsent";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -84,6 +84,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
+        <GoogleTagManagerNoScript />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
