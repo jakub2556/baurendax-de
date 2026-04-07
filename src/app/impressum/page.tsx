@@ -4,6 +4,7 @@ import { BreadcrumbSchema } from "@/components/StructuredData";
 export const metadata: Metadata = {
   title: "Impressum",
   description: "Impressum von Baurendax – Angaben gemäß § 5 TMG.",
+  alternates: { canonical: "https://baurendax.de/impressum" },
 };
 
 export default function Impressum() {

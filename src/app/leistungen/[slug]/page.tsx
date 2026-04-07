@@ -17,6 +17,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${service.title} – Baurendax Wärmepumpen`,
     description: service.description.slice(0, 160),
+    alternates: { canonical: `https://baurendax.de/leistungen/${slug}` },
+    openGraph: {
+      title: `${service.title} – Baurendax`,
+      description: service.description.slice(0, 160),
+      locale: "de_DE",
+      images: [{ url: service.image }],
+    },
   };
 }
 

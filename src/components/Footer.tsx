@@ -14,10 +14,10 @@ const footerLinks = [
   {
     title: "Leistungen",
     links: [
-      { name: "Wärmepumpen-Installation", href: "/leistungen#installation" },
-      { name: "Heizungsumrüstung", href: "/leistungen#umruestung" },
-      { name: "Beratung & Planung", href: "/leistungen#beratung" },
-      { name: "Wartung & Service", href: "/leistungen#wartung" },
+      { name: "Wärmepumpen-Installation", href: "/leistungen/installation" },
+      { name: "Heizungsumrüstung", href: "/leistungen/umruestung" },
+      { name: "Beratung & Planung", href: "/leistungen/beratung" },
+      { name: "Wartung & Service", href: "/leistungen/wartung" },
     ],
   },
   {

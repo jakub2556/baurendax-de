@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-03-31T21:22:43.281Z",
+  "createdAt": "2026-04-07T16:28:58.274Z",
   "studioVersion": "5.18.0",
   "version": 3,
   "workspaces": [
@@ -13,7 +13,7 @@
       },
       "name": "baurendax",
       "projectId": "fvp2sfim",
-      "schema": "ebac6ae9.create-schema.json",
+      "schema": "437ad6dd.create-schema.json",
       "title": "Baurendax CMS",
       "tools": "ef87c8fe.create-tools.json"
     }

@@ -1,6 +1,6 @@
 # Baurendax — Ihr Experte für Wärmepumpen in Deutschland
 
-> Baurendax ist ein deutschlandweiter Fachbetrieb für Wärmepumpen-Installation, Heizungsumrüstung und Wartung. Wir bieten Beratung, Planung, Lieferung und Installation aus einer Hand.
+> Baurendax ist ein deutschlandweiter Fachbetrieb für Wärmepumpen-Installation, Heizungsumrüstung und Wartung. Wir bieten Beratung, Planung, Lieferung und Installation aus einer Hand. Kostenlose Erstberatung, Festpreisgarantie, 2 Jahre Garantie.
 
 ## Hauptseiten
 
@@ -13,6 +13,8 @@
 - [Über uns](https://baurendax.de/ueber-uns): Unser Team und unsere Werte
 - [FAQ](https://baurendax.de/faq): Häufig gestellte Fragen zu Wärmepumpen
 - [Kontakt](https://baurendax.de/kontakt): Kostenlose Beratung anfragen
+- [Impressum](https://baurendax.de/impressum): Angaben gemäß § 5 TMG
+- [Datenschutz](https://baurendax.de/datenschutz): Datenschutzerklärung
 
 ## Blog / Ratgeber
 
@@ -22,9 +24,22 @@
 - [GEG 2026: Das neue Heizungsgesetz](https://baurendax.de/blog/geg-heizungsgesetz-2026): Was Hausbesitzer wissen müssen
 - [Wärmepumpe Lautstärke & Abstand](https://baurendax.de/blog/waermepumpe-lautstaerke-abstand): Regeln und Nachbarschaftsrecht
 
+## Regionale Seiten
+
+- [Wärmepumpe Berlin](https://baurendax.de/waermepumpe/berlin): Installation in Berlin und Umgebung
+- [Wärmepumpe München](https://baurendax.de/waermepumpe/muenchen): Installation in München und Umgebung
+- [Wärmepumpe Hamburg](https://baurendax.de/waermepumpe/hamburg): Installation in Hamburg und Umgebung
+- [Wärmepumpe Köln](https://baurendax.de/waermepumpe/koeln): Installation in Köln und Umgebung
+- [Wärmepumpe Frankfurt](https://baurendax.de/waermepumpe/frankfurt): Installation in Frankfurt und Umgebung
+- [Wärmepumpe Stuttgart](https://baurendax.de/waermepumpe/stuttgart): Installation in Stuttgart und Umgebung
+- [Wärmepumpe Düsseldorf](https://baurendax.de/waermepumpe/duesseldorf): Installation in Düsseldorf und Umgebung
+- [Wärmepumpe Leipzig](https://baurendax.de/waermepumpe/leipzig): Installation in Leipzig und Umgebung
+
 ## Kontakt
 
 - Website: https://baurendax.de
 - E-Mail: info@baurendax.de
+- Telefon: +421 944 075 714
 - Servicegebiet: Ganz Deutschland
 - Leistungen: Wärmepumpen-Installation, Heizungsumrüstung, Beratung, Wartung
+- Preise: Ab 15.000 € (Komplettpaket inkl. Installation)

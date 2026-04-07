@@ -4,6 +4,7 @@ import { BreadcrumbSchema } from "@/components/StructuredData";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
   description: "Datenschutzerklärung von Baurendax – Informationen zum Umgang mit personenbezogenen Daten.",
+  alternates: { canonical: "https://baurendax.de/datenschutz" },
 };
 
 export default function Datenschutz() {
