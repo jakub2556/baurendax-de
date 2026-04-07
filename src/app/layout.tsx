@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { OrganizationSchema } from "@/components/StructuredData";
+import { GoogleAnalytics } from "@/components/GoogleTagManager";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -70,11 +72,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${dmSans.variable} ${inter.variable}`}>
+      <head>
+        <GoogleAnalytics />
+        <meta
+          name="google-site-verification"
+          content="MJIVqYuXW2QKRYcL8VM7fbIB_GRU84D6r_q9Dn1iTEU"
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <OrganizationSchema />
+        <CookieConsent />
       </body>
     </html>
   );

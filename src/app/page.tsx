@@ -319,11 +319,11 @@ export default function Home() {
                 </p>
                 <ul className="mt-10 space-y-5">
                   {[
-                    "Zertifizierte Fachbetrieb-Qualität",
-                    "Deutschlandweiter Service",
+                    "Kostenlose Beratung & Begehung vor Ort",
+                    "2 Jahre Garantie mit Verlängerungsoption",
                     "Festpreisgarantie — keine versteckten Kosten",
-                    "Unterstützung bei Fördermittel-Anträgen",
-                    "Persönliche Betreuung von A bis Z",
+                    "Zertifizierte Fachbetrieb-Qualität",
+                    "Deutschlandweiter Service & persönliche Betreuung",
                   ].map((item, i) => (
                     <li key={item} className="flex items-start gap-4 group">
                       <div className="w-8 h-8 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
@@ -424,8 +424,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* === PRICING === */}
+      <section className="bg-white py-28 lg:py-36">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-dark via-primary to-primary-light p-10 sm:p-16 lg:p-20 noise">
+              {/* Decorative */}
+              <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-accent/10 blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-primary-light/20 blur-3xl" />
+
+              <div className="relative grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left — Pricing */}
+                <div>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-white/90 text-sm font-medium mb-6">
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                    Transparente Preise
+                  </span>
+                  <div className="flex items-baseline gap-3 mb-4">
+                    <span className="text-6xl sm:text-7xl font-bold text-white font-heading">ab 15.000</span>
+                    <span className="text-3xl font-bold text-white/70">€</span>
+                  </div>
+                  <p className="text-xl text-white/70 mb-2">
+                    Komplettpaket inkl. Wärmepumpe, Montage & Inbetriebnahme
+                  </p>
+                  <p className="text-white/40 text-sm">
+                    Endpreis abhängig von Ihren individuellen Gegebenheiten
+                  </p>
+                </div>
+
+                {/* Right — Factors */}
+                <div className="space-y-4">
+                  <p className="text-white/60 text-sm font-semibold uppercase tracking-wider mb-6">
+                    Der Preis richtet sich nach:
+                  </p>
+                  {[
+                    { title: "Komplexität der Installation", desc: "Aufwand je nach Gebäudestruktur und Zugänglichkeit" },
+                    { title: "Standort der Technikraum", desc: "Entfernung und Leitungswege zur Außeneinheit" },
+                    { title: "Leistung der Wärmepumpe", desc: "Dimensionierung nach Wohnfläche und Dämmstandard" },
+                    { title: "Zusätzliche Arbeiten", desc: "Ggf. Heizkörpertausch, Elektrik oder Bohrungen" },
+                  ].map((item) => (
+                    <div key={item.title} className="flex gap-4 items-start">
+                      <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">{item.title}</p>
+                        <p className="text-white/40 text-sm">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="pt-4">
+                    <a
+                      href="#kontakt"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-2xl hover:bg-accent-dark transition-all shadow-lg shadow-accent/25 text-lg"
+                    >
+                      Kostenloses Angebot anfordern
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* === GALLERY === */}
       <GallerySection />
+
+      {/* === CTA / CONTACT FORM === */}
+      <ContactFormSection />
 
       {/* === FAQ PREVIEW === */}
       <section className="bg-surface py-28 lg:py-36">
@@ -454,6 +526,14 @@ export default function Home() {
               {
                 q: "Funktioniert eine Wärmepumpe auch im Altbau?",
                 a: "Ja! Moderne Wärmepumpen arbeiten auch bei niedrigen Außentemperaturen effizient und können in den meisten Altbauten eingesetzt werden. Wir prüfen die Eignung bei der Begehung vor Ort.",
+              },
+              {
+                q: "Gibt es eine Garantie?",
+                a: "Ja, auf alle unsere Installationen geben wir 2 Jahre Garantie mit der Möglichkeit einer Verlängerung. Die Wärmepumpe selbst hat zusätzlich die Herstellergarantie.",
+              },
+              {
+                q: "Ist die Erstberatung wirklich kostenlos?",
+                a: "Ja, die Erstberatung und Begehung vor Ort ist für Sie komplett kostenlos und unverbindlich. Wir erstellen Ihnen danach ein individuelles Festpreisangebot.",
               },
             ].map((faq, i) => (
               <ScrollReveal key={faq.q} delay={i * 100}>
@@ -486,9 +566,6 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* === CTA / CONTACT FORM === */}
-      <ContactFormSection />
 
       {/* Homepage-specific WebPage schema */}
       <script

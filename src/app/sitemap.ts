@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: new Date("2026-03-31"),
-      images: [`${baseUrl}/images/Fotka-domu.png`, `${baseUrl}/images/logo.png`],
+      images: [`${baseUrl}/images/Fotka-domu.webp`, `${baseUrl}/images/logo-baurendax.webp`],
     },
     {
       url: `${baseUrl}/leistungen`,
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/ueber-uns`,
       lastModified: new Date("2026-03-31"),
-      images: [`${baseUrl}/images/ChatGPT-Image-18.-3.-2026-20_32_36.png`],
+      images: [`${baseUrl}/images/ChatGPT-Image-18.-3.-2026-20_32_36.webp`],
     },
     {
       url: `${baseUrl}/blog`,

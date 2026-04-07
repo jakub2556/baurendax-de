@@ -4,12 +4,15 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { LightboxGallery } from "@/components/Lightbox";
 
 const galleryImages = [
-  { src: "/images/IMG20251104143313.webp", alt: "Wärmepumpe Installation" },
-  { src: "/images/IMG20251109155056-1.webp", alt: "Wärmepumpe Montage" },
-  { src: "/images/IMG20251101120210.webp", alt: "Außeneinheit Installation" },
-  { src: "/images/IMG20250930173005.webp", alt: "Fertige Wärmepumpe" },
-  { src: "/images/IMG20251009202259.webp", alt: "Technikraum" },
-  { src: "/images/IMG20251104135953.webp", alt: "Wärmepumpe Service" },
+  { src: "/images/IMG20251104143313.webp", alt: "Wärmepumpe Installation — Außeneinheit" },
+  { src: "/images/IMG20251109155056-1.webp", alt: "Professionelle Wärmepumpen-Montage" },
+  { src: "/images/IMG20251101120210.webp", alt: "Außeneinheit an Hauswand montiert" },
+  { src: "/images/IMG20250930173005.webp", alt: "Fertige Wärmepumpe im Betrieb" },
+  { src: "/images/IMG20251009202259.webp", alt: "Technikraum mit Wärmepumpe" },
+  { src: "/images/IMG20251104135953.webp", alt: "Wärmepumpe Service und Wartung" },
+  { src: "/images/IMG20251104143318.webp", alt: "Wärmepumpe Nahaufnahme" },
+  { src: "/images/IMG202511041402502.webp", alt: "Installation Innenbereich" },
+  { src: "/images/IMG20251202153350.webp", alt: "Abgeschlossenes Wärmepumpen-Projekt" },
 ];
 
 export function GallerySection() {
