@@ -41,10 +41,7 @@ export function OrganizationSchema() {
           telephone: "+421944075714",
           priceRange: "€€",
           email: "info@baurendax.de",
-          sameAs: [
-            "https://www.facebook.com/baurendax",
-            "https://www.instagram.com/baurendax",
-          ],
+          sameAs: [],
         }),
       }}
     />
