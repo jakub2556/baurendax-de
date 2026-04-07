@@ -69,7 +69,7 @@ export function CookieConsent() {
               Wir verwenden Cookies und Google Analytics, um unsere Website zu verbessern und die
               Nutzung zu analysieren. Sie können selbst entscheiden, ob Sie Analyse-Cookies zulassen
               möchten. Weitere Informationen finden Sie in unserer{" "}
-              <Link href="/datenschutz" className="text-accent hover:underline">
+              <Link href="/datenschutz" className="text-accent-dark font-semibold underline hover:text-accent">
                 Datenschutzerklärung
               </Link>
               .

@@ -91,7 +91,7 @@ export function Footer() {
               <Link
                 key={city.name}
                 href={city.href}
-                className="text-sm text-white/50 hover:text-accent transition-colors"
+                className="text-sm text-white/70 hover:text-accent transition-colors"
               >
                 {city.name}
               </Link>
@@ -110,7 +110,7 @@ export function Footer() {
               href="https://eweby.eu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent-light underline hover:text-white transition-colors"
+              className="text-accent underline hover:text-white transition-colors"
             >
               EWEBY.EU
             </a>
