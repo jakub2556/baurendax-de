@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { OrganizationSchema } from "@/components/StructuredData";
 import { GoogleAnalytics } from "@/components/GoogleTagManager";
 import { CookieConsent } from "@/components/CookieConsent";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
       "Professionelle Wärmepumpen-Installation in ganz Deutschland. Beratung, Planung und Montage aus einer Hand. Bis zu 70% KfW-Förderung. Jetzt kostenlos anfragen!",
     images: [
       {
-        url: "https://baurendax.de/images/hero-bg.webp",
+        url: "https://baurendax.de/og-image.png",
         width: 1200,
         height: 630,
         alt: "Baurendax – Wärmepumpen-Installation",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Baurendax – Wärmepumpe installieren lassen",
     description: "Professionelle Wärmepumpen-Installation in ganz Deutschland. Bis zu 70% Förderung.",
-    images: ["https://baurendax.de/images/hero-bg.webp"],
+    images: ["https://baurendax.de/og-image.png"],
   },
   robots: {
     index: true,
@@ -78,12 +79,16 @@ export default function RootLayout({
           name="google-site-verification"
           content="MJIVqYuXW2QKRYcL8VM7fbIB_GRU84D6r_q9Dn1iTEU"
         />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <OrganizationSchema />
+        <WhatsAppButton />
         <CookieConsent />
       </body>
     </html>

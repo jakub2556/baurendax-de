@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe FAQ – Kosten, Förderung, Altbau, Installation",
@@ -152,6 +153,12 @@ export default function FAQ() {
             ),
           }),
         }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "FAQ", href: "/faq" },
+        ]}
       />
     </>
   );

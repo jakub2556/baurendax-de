@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Über Baurendax – Wärmepumpen-Fachbetrieb Deutschland",
@@ -109,6 +110,12 @@ export default function UeberUns() {
           </Link>
         </div>
       </section>
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Über uns", href: "/ueber-uns" },
+        ]}
+      />
     </>
   );
 }

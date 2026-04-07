@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog-posts";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe Ratgeber – Kosten, Förderung, Altbau & GEG 2026",
@@ -118,6 +119,12 @@ export default function Blog() {
           </div>
         </div>
       </section>
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Blog", href: "/blog" },
+        ]}
+      />
     </>
   );
 }

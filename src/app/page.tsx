@@ -165,7 +165,7 @@ export default function Home() {
                   </svg>
                 </Link>
                 <a
-                  href="tel:+491234567890"
+                  href="tel:+421944075714"
                   className="group inline-flex items-center justify-center px-8 py-4 glass text-white font-semibold rounded-2xl hover:bg-white/15 transition-all text-lg"
                 >
                   <svg className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

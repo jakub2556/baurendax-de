@@ -38,6 +38,7 @@ export function OrganizationSchema() {
             "KfW Förderung",
             "GEG Gebäudeenergiegesetz",
           ],
+          telephone: "+421944075714",
           priceRange: "€€",
           email: "info@baurendax.de",
           sameAs: [

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services, getServiceBySlug } from "@/data/services";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -219,6 +220,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             areaServed: { "@type": "Country", name: "Deutschland" },
           }),
         }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Leistungen", href: "/leistungen" },
+          { name: service.title, href: `/leistungen/${slug}` },
+        ]}
       />
     </>
   );

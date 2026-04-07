@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/data/services";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe installieren lassen – Beratung, Montage & Wartung",
@@ -100,6 +101,12 @@ export default function Leistungen() {
           </Link>
         </div>
       </section>
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Leistungen", href: "/leistungen" },
+        ]}
+      />
     </>
   );
 }

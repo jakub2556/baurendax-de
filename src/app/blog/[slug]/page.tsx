@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -219,6 +220,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             },
           }),
         }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Blog", href: "/blog" },
+          { name: post.title, href: `/blog/${slug}` },
+        ]}
       />
     </>
   );

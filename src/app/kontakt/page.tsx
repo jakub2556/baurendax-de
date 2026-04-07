@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe Angebot anfordern – Kostenlose Beratung",
@@ -35,8 +36,8 @@ export default function Kontakt() {
                 </svg>
               </div>
               <h3 className="font-semibold text-foreground font-heading">Telefon</h3>
-              <a href="tel:+491234567890" className="mt-1 text-muted hover:text-accent transition-colors">
-                +49 123 456 7890
+              <a href="tel:+421944075714" className="mt-1 text-muted hover:text-accent transition-colors">
+                +421 944 075 714
               </a>
             </div>
             <div className="text-center p-6 rounded-2xl bg-surface">
@@ -65,6 +66,12 @@ export default function Kontakt() {
 
       {/* Form */}
       <ContactFormSection />
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Kontakt", href: "/kontakt" },
+        ]}
+      />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
@@ -30,7 +31,11 @@ export default function Datenschutz() {
         <h2>2. Hosting</h2>
         <p>
           Wir hosten die Inhalte unserer Website bei Cloudflare. Anbieter ist die Cloudflare, Inc.,
-          101 Townsend St, San Francisco, CA 94107, USA.
+          101 Townsend St, San Francisco, CA 94107, USA. Details entnehmen Sie der Datenschutzerklärung
+          von Cloudflare:{" "}
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
+            https://www.cloudflare.com/privacypolicy/
+          </a>
         </p>
 
         <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
@@ -45,11 +50,11 @@ export default function Datenschutz() {
         <p>
           Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
           <br />
-          Baurendax
-          <br />
-          [Vollständige Adresse]
+          Baurendax — Peter Bauer
           <br />
           E-Mail: info@baurendax.de
+          <br />
+          Telefon: +421 944 075 714
         </p>
 
         <h2>4. Datenerfassung auf dieser Website</h2>
@@ -57,20 +62,43 @@ export default function Datenschutz() {
         <p>
           Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
           Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung
-          der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+          der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben
+          wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage
+          von Art. 6 Abs. 1 lit. b DSGVO.
+        </p>
+
+        <h3>Google Analytics</h3>
+        <p>
+          Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited.
+          Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen.
+          Die Nutzung erfolgt erst nach Ihrer ausdrücklichen Einwilligung über unseren Cookie-Banner
+          (Art. 6 Abs. 1 lit. a DSGVO). Wir nutzen Google Analytics mit der Funktion „Consent Mode v2",
+          sodass ohne Ihre Zustimmung keine personenbezogenen Daten erhoben werden.
+        </p>
+        <p>
+          Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer
+          Browser-Software verhindern. Sie können darüber hinaus die Erfassung durch Google Analytics
+          verhindern, indem Sie den Cookie-Banner ablehnen.
         </p>
 
         <h2>5. Ihre Rechte</h2>
         <p>
-          Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck
-          Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die
-          Berichtigung oder Löschung dieser Daten zu verlangen.
+          Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten
+          personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung
+          sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.
         </p>
         <p>
-          Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns
-          wenden.
+          Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der
+          im Impressum angegebenen Adresse an uns wenden. Ferner steht Ihnen ein Beschwerderecht bei
+          der zuständigen Aufsichtsbehörde zu.
         </p>
       </div>
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Datenschutz", href: "/datenschutz" },
+        ]}
+      />
     </section>
   );
 }
