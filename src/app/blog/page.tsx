@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/data/blog-posts";
+import { getAllPosts } from "@/sanity/queries";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://baurendax.de/blog" },
 };
 
-export default function Blog() {
+export default async function Blog() {
+  const blogPosts = await getAllPosts();
   const [featured, ...rest] = blogPosts;
 
   return (

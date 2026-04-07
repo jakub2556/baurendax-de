@@ -2,110 +2,39 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { getAllPosts, getPostBySlug, getPostSlugs } from "@/sanity/queries";
 import { BreadcrumbSchema } from "@/components/StructuredData";
+import { PortableTextRenderer } from "@/components/PortableTextRenderer";
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  const slugs = await getPostSlugs();
+  return slugs.map((slug: string) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  return params.then(({ slug }) => {
-    const post = getPostBySlug(slug);
-    if (!post) return { title: "Nicht gefunden" };
-    return {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) return { title: "Nicht gefunden" };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
       title: post.title,
       description: post.excerpt,
-      openGraph: {
-        title: post.title,
-        description: post.excerpt,
-        type: "article",
-        locale: "de_DE",
-        images: [{ url: `https://baurendax.de${post.image}` }],
-      },
-    };
-  });
+      type: "article",
+      locale: "de_DE",
+      images: [{ url: post.image }],
+    },
+  };
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  // Simple markdown-like rendering
-  const renderContent = (content: string) => {
-    return content
-      .trim()
-      .split("\n")
-      .map((line, i) => {
-        const trimmed = line.trim();
-        if (!trimmed) return <br key={i} />;
-        if (trimmed.startsWith("### "))
-          return (
-            <h3 key={i} className="text-xl font-bold text-foreground font-heading mt-10 mb-4">
-              {trimmed.slice(4)}
-            </h3>
-          );
-        if (trimmed.startsWith("## "))
-          return (
-            <h2 key={i} className="text-2xl sm:text-3xl font-bold text-foreground font-heading mt-12 mb-5">
-              {trimmed.slice(3)}
-            </h2>
-          );
-        if (trimmed.startsWith("| ")) {
-          // Table row
-          const cells = trimmed.split("|").filter(Boolean).map((c) => c.trim());
-          if (cells.every((c) => /^-+$/.test(c))) return null; // divider row
-          const isHeader = i > 0 && content.trim().split("\n")[
-            content.trim().split("\n").indexOf(line) + 1
-          ]?.trim().startsWith("|--");
-          return (
-            <tr key={i} className={isHeader ? "bg-surface" : "border-b border-border"}>
-              {cells.map((cell, j) =>
-                isHeader ? (
-                  <th key={j} className="px-4 py-3 text-left text-sm font-semibold text-foreground">
-                    {cell}
-                  </th>
-                ) : (
-                  <td key={j} className="px-4 py-3 text-sm text-muted">
-                    {renderInline(cell)}
-                  </td>
-                )
-              )}
-            </tr>
-          );
-        }
-        if (trimmed.startsWith("- "))
-          return (
-            <li key={i} className="flex items-start gap-3 mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2.5 flex-shrink-0" />
-              <span className="text-muted leading-relaxed">{renderInline(trimmed.slice(2))}</span>
-            </li>
-          );
-        return (
-          <p key={i} className="text-muted leading-relaxed mb-4 text-lg">
-            {renderInline(trimmed)}
-          </p>
-        );
-      });
-  };
-
-  const renderInline = (text: string) => {
-    // Bold
-    const parts = text.split(/(\*\*[^*]+\*\*)/g);
-    return parts.map((part, i) => {
-      if (part.startsWith("**") && part.endsWith("**")) {
-        return (
-          <strong key={i} className="font-semibold text-foreground">
-            {part.slice(2, -2)}
-          </strong>
-        );
-      }
-      return part;
-    });
-  };
-
-  const otherPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
+  const allPosts = await getAllPosts();
+  const otherPosts = allPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
   return (
     <>
@@ -147,7 +76,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       {/* Content */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="prose-custom">{renderContent(post.content)}</div>
+        <div className="prose-custom">
+          <PortableTextRenderer value={post.body} />
+        </div>
 
         {/* CTA */}
         <div className="mt-16 p-8 sm:p-10 bg-gradient-to-br from-primary to-primary-dark rounded-3xl text-center">
@@ -210,7 +141,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             "@type": "Article",
             headline: post.title,
             description: post.excerpt,
-            image: `https://baurendax.de${post.image}`,
+            image: post.image,
             datePublished: post.date,
             author: { "@type": "Organization", name: "Baurendax" },
             publisher: {

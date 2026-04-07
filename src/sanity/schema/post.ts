@@ -52,6 +52,12 @@ export const post = defineType({
       },
     }),
     defineField({
+      name: "readTime",
+      title: "Čas čítania",
+      type: "string",
+      description: "napr. '8 Min.'",
+    }),
+    defineField({
       name: "publishedAt",
       title: "Dátum zverejnenia",
       type: "datetime",

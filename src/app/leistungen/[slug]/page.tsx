@@ -2,30 +2,31 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { services, getServiceBySlug } from "@/data/services";
+import { getAllServices, getServiceBySlug, getServiceSlugs } from "@/sanity/queries";
 import { BreadcrumbSchema } from "@/components/StructuredData";
 
-export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+export async function generateStaticParams() {
+  const slugs = await getServiceSlugs();
+  return slugs.map((slug: string) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  return params.then(({ slug }) => {
-    const service = getServiceBySlug(slug);
-    if (!service) return { title: "Nicht gefunden" };
-    return {
-      title: `${service.title} – Baurendax Wärmepumpen`,
-      description: service.description.slice(0, 160),
-    };
-  });
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
+  if (!service) return { title: "Nicht gefunden" };
+  return {
+    title: `${service.title} – Baurendax Wärmepumpen`,
+    description: service.description.slice(0, 160),
+  };
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const service = await getServiceBySlug(slug);
   if (!service) notFound();
 
-  const otherServices = services.filter((s) => s.slug !== slug);
+  const allServices = await getAllServices();
+  const otherServices = allServices.filter((s) => s.slug !== slug);
 
   return (
     <>

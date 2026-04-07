@@ -37,10 +37,44 @@ export const service = defineType({
       ],
     }),
     defineField({
+      name: "shortDescription",
+      title: "Krátky popis",
+      type: "string",
+      description: "Zobrazí sa na karte služby na homepage",
+    }),
+    defineField({
       name: "features",
       title: "Výhody / Body",
       type: "array",
       of: [{ type: "string" }],
+    }),
+    defineField({
+      name: "process",
+      title: "Postup",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "title", title: "Názov kroku", type: "string" },
+            { name: "description", title: "Popis kroku", type: "string" },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "faq",
+      title: "Často kladené otázky",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "q", title: "Otázka", type: "string" },
+            { name: "a", title: "Odpoveď", type: "text" },
+          ],
+        },
+      ],
     }),
     defineField({
       name: "order",
