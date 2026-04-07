@@ -96,8 +96,35 @@ export function Footer() {
           ))}
         </div>
 
+        {/* City links for local SEO */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/70 mb-4">
+            Wärmepumpe in Ihrer Stadt
+          </h3>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {[
+              { name: "Berlin", href: "/waermepumpe/berlin" },
+              { name: "München", href: "/waermepumpe/muenchen" },
+              { name: "Hamburg", href: "/waermepumpe/hamburg" },
+              { name: "Köln", href: "/waermepumpe/koeln" },
+              { name: "Frankfurt", href: "/waermepumpe/frankfurt" },
+              { name: "Stuttgart", href: "/waermepumpe/stuttgart" },
+              { name: "Düsseldorf", href: "/waermepumpe/duesseldorf" },
+              { name: "Leipzig", href: "/waermepumpe/leipzig" },
+            ].map((city) => (
+              <Link
+                key={city.name}
+                href={city.href}
+                className="text-sm text-white/50 hover:text-accent transition-colors"
+              >
+                {city.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/70">
             &copy; {new Date().getFullYear()} Baurendax. Alle Rechte vorbehalten.
           </p>

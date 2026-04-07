@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog-posts";
 import { services } from "@/data/services";
+import { cities } from "@/data/cities";
 
 export const dynamic = "force-static";
 
@@ -57,5 +58,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${baseUrl}${post.image}`],
   }));
 
-  return [...staticPages, ...servicePages, ...blogPages];
+  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/waermepumpe/${city.slug}`,
+    lastModified: new Date("2026-04-07"),
+  }));
+
+  return [...staticPages, ...servicePages, ...blogPages, ...cityPages];
 }
