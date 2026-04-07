@@ -79,7 +79,7 @@ export function CookieConsent() {
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={handleAccept}
-                className="px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors text-sm"
+                className="px-6 py-3 bg-accent-dark text-white font-semibold rounded-xl hover:bg-accent transition-colors text-sm"
               >
                 Alle akzeptieren
               </button>

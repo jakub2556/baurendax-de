@@ -110,7 +110,7 @@ export function Footer() {
               href="https://eweby.eu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline hover:text-white transition-colors"
+              className="text-white underline hover:text-accent transition-colors"
             >
               EWEBY.EU
             </a>
