@@ -66,9 +66,9 @@ export default function UeberUns() {
           <div className="grid sm:grid-cols-3 gap-8">
             {[
               {
-                title: "Qualität",
+                title: "Qualität & Garantie",
                 description:
-                  "Wir setzen auf hochwertige Markenprodukte und fachgerechte Installation nach höchsten Standards.",
+                  "Markengeräte von Viessmann, LG, Blaupunkt & Co. mit 2 Jahren Garantie und optionaler Verlängerung auf bis zu 5 Jahre.",
               },
               {
                 title: "Transparenz",

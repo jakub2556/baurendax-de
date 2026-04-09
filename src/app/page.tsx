@@ -517,7 +517,7 @@ export default function Home() {
             {[
               {
                 q: "Wie viel kostet eine Wärmepumpe?",
-                a: "Die Kosten variieren je nach Gebäude und Anforderungen. Eine Luft-Wasser-Wärmepumpe kostet inkl. Installation typischerweise zwischen 15.000 und 30.000 €. Durch staatliche Förderungen können bis zu 70% der Kosten übernommen werden.",
+                a: "Eine Luft-Wasser-Wärmepumpe kostet inkl. Installation typischerweise zwischen 15.000 und 20.000 €. Durch staatliche Förderungen können bis zu 70% der Kosten übernommen werden. Wir erstellen Ihnen ein kostenloses Festpreisangebot.",
               },
               {
                 q: "Wie lange dauert die Installation?",
@@ -525,11 +525,15 @@ export default function Home() {
               },
               {
                 q: "Funktioniert eine Wärmepumpe auch im Altbau?",
-                a: "Ja! Moderne Wärmepumpen arbeiten auch bei niedrigen Außentemperaturen effizient und können in den meisten Altbauten eingesetzt werden. Wir prüfen die Eignung bei der Begehung vor Ort.",
+                a: "Ja! Moderne Wärmepumpen eignen sich hervorragend für Altbauten — sowohl mit bestehenden Heizkörpern als auch mit Fußbodenheizung. Bei der kostenlosen Begehung prüfen wir, welches System für Ihr Gebäude optimal ist.",
               },
               {
                 q: "Gibt es eine Garantie?",
-                a: "Ja, auf alle unsere Installationen geben wir 2 Jahre Garantie mit der Möglichkeit einer Verlängerung. Die Wärmepumpe selbst hat zusätzlich die Herstellergarantie.",
+                a: "Ja, auf alle unsere Installationen geben wir 2 Jahre Garantie mit der Möglichkeit einer kostenpflichtigen Verlängerung auf bis zu 5 Jahre. Die Wärmepumpe selbst hat zusätzlich die Herstellergarantie.",
+              },
+              {
+                q: "Welche Marken verwenden Sie?",
+                a: "Wir arbeiten mit führenden Herstellern wie Viessmann, LG, Blaupunkt, Hyundai und FoxAir zusammen. Die Wahl des Geräts richtet sich nach Ihren individuellen Anforderungen.",
               },
               {
                 q: "Ist die Erstberatung wirklich kostenlos?",

@@ -51,7 +51,7 @@ export default function Datenschutz() {
         <p>
           Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
           <br />
-          Baurendax — Peter Bauer
+          Baurendax
           <br />
           E-Mail: info@baurendax.de
           <br />

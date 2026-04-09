@@ -59,7 +59,7 @@ export const services: Service[] = [
       { title: "Inbetriebnahme", description: "Funktionstest, Einweisung und Übergabe" },
     ],
     faq: [
-      { q: "Welche Marken installieren Sie?", a: "Wir arbeiten mit führenden Herstellern wie Viessmann, Bosch, Daikin und Vaillant zusammen." },
+      { q: "Welche Marken installieren Sie?", a: "Wir arbeiten mit führenden Herstellern wie Viessmann, LG, Blaupunkt, Hyundai und FoxAir zusammen." },
       { q: "Wie lange dauert die Installation?", a: "Die reine Installation dauert 2-5 Arbeitstage, je nach Komplexität des Projekts." },
       { q: "Was ist eine Festpreisgarantie?", a: "Der vereinbarte Preis gilt — auch wenn die Installation aufwändiger wird als geplant. Kein Risiko für Sie." },
     ],

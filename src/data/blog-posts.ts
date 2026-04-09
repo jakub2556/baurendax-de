@@ -44,15 +44,9 @@ Zur reinen Gerätekosten kommen noch hinzu:
 - **Elektrische Anpassungen:** 500 – 2.000 €
 - **Fundamentierung/Aufstellung:** 500 – 1.500 €
 
-### Gesamtkosten-Übersicht
+### Was kostet das Komplettpaket?
 
-Für ein typisches Einfamilienhaus mit 150 m² Wohnfläche können Sie mit folgenden Gesamtkosten rechnen:
-
-| Variante | Gesamtkosten | Nach Förderung |
-|----------|-------------|----------------|
-| Luft-Wasser | 20.000 – 28.000 € | 6.000 – 14.000 € |
-| Sole-Wasser | 25.000 – 35.000 € | 7.500 – 17.500 € |
-| Wasser-Wasser | 28.000 – 40.000 € | 8.400 – 20.000 € |
+Für ein typisches Einfamilienhaus können Sie mit Gesamtkosten von **15.000 bis 20.000 €** rechnen (Luft-Wasser-Wärmepumpe inkl. Installation). Durch staatliche Förderung (bis zu 70%) kann der tatsächliche Eigenanteil auf unter 6.000 € sinken.
 
 ### Förderung: Bis zu 70% Zuschuss
 

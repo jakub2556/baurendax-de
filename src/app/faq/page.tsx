@@ -15,7 +15,7 @@ const faqs = [
     items: [
       {
         q: "Was kostet eine Wärmepumpe inklusive Installation?",
-        a: "Die Gesamtkosten für eine Luft-Wasser-Wärmepumpe inklusive Installation liegen typischerweise zwischen 15.000 und 30.000 €. Der genaue Preis hängt von der Gebäudegröße, dem gewählten Gerät und den baulichen Gegebenheiten ab. Wir erstellen Ihnen ein individuelles Festpreisangebot.",
+        a: "Eine Luft-Wasser-Wärmepumpe inklusive Installation kostet typischerweise zwischen 15.000 und 20.000 €. Der genaue Preis hängt von der Gebäudegröße, dem gewählten Gerät und den baulichen Gegebenheiten ab. Wir erstellen Ihnen ein individuelles Festpreisangebot.",
       },
       {
         q: "Welche Fördermittel gibt es für Wärmepumpen?",
@@ -36,11 +36,11 @@ const faqs = [
       },
       {
         q: "Funktioniert eine Wärmepumpe auch im Altbau?",
-        a: "Ja, moderne Wärmepumpen arbeiten auch bei niedrigen Außentemperaturen bis -20°C effizient. In den meisten Altbauten ist der Einbau problemlos möglich — auch mit bestehenden Heizkörpern. Wir prüfen die Eignung bei der Begehung vor Ort.",
+        a: "Ja! Moderne Wärmepumpen eignen sich hervorragend für Altbauten — sowohl mit bestehenden Heizkörpern als auch mit Fußbodenheizung. Bei der kostenlosen Begehung prüfen wir, welches System für Ihr Gebäude optimal ist und erstellen ein individuelles Konzept.",
       },
       {
         q: "Welche Wärmepumpen-Marken verwenden Sie?",
-        a: "Wir arbeiten mit führenden Herstellern wie Viessmann, Bosch, Daikin und Vaillant zusammen. Die Wahl des Geräts richtet sich nach Ihren individuellen Anforderungen und den Gegebenheiten vor Ort.",
+        a: "Wir arbeiten mit führenden Herstellern wie Viessmann, LG, Blaupunkt, Hyundai und FoxAir zusammen. Die Wahl des Geräts richtet sich nach Ihren individuellen Anforderungen und den Gegebenheiten vor Ort.",
       },
       {
         q: "Muss ich meine bestehende Heizung vorher entfernen?",

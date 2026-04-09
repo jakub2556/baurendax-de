@@ -58,7 +58,7 @@ export default function Kontakt() {
                 </svg>
               </div>
               <h3 className="font-semibold text-foreground font-heading">Erreichbarkeit</h3>
-              <p className="mt-1 text-muted">Mo – Fr: 8:00 – 18:00 Uhr</p>
+              <p className="mt-1 text-muted">Mo – Fr: 10:00 – 18:00 Uhr</p>
             </div>
           </div>
         </div>

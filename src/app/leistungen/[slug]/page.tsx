@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-4 py-1.5 rounded-full glass text-accent text-sm font-semibold mb-6">
-                Leistung
+                Unsere Leistungen
               </span>
               <h1 className="text-4xl sm:text-5xl font-bold text-white font-heading tracking-tight leading-tight">
                 {service.title}

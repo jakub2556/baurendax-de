@@ -1,5 +1,3 @@
-import { connect } from "cloudflare:sockets";
-
 interface ContactForm {
   heatingType: string;
   propertyType: string;
@@ -14,16 +12,12 @@ interface ContactForm {
 }
 
 interface Env {
-  SMTP_HOST: string;
-  SMTP_USER: string;
-  SMTP_PASS: string;
+  RESEND_API_KEY: string;
   MAIL_TO: string;
+  MAIL_FROM: string;
 }
 
-const encoder = new TextEncoder();
-const decoder = new TextDecoder();
-
-// Handle POST — send email
+// Handle POST — send email via Resend API
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const headers = {
     "Content-Type": "application/json",
@@ -45,7 +39,30 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    await sendEmail(context.env, data);
+    const mailTo = context.env.MAIL_TO || "info@baurendax.de";
+    const mailFrom = context.env.MAIL_FROM || "Baurendax Website <no-reply@baurendax.de>";
+
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${context.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: mailFrom,
+        to: [mailTo],
+        reply_to: data.email,
+        subject: `Neue Anfrage: ${data.name} — ${data.propertyType || "Wärmepumpe"}`,
+        html: buildEmailHtml(data, mailTo),
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("Resend error:", res.status, err);
+      throw new Error(`Resend API error: ${res.status}`);
+    }
+
     return new Response(JSON.stringify({ success: true }), { headers });
   } catch (err) {
     console.error("Email error:", err);
@@ -66,75 +83,6 @@ export const onRequestOptions: PagesFunction = async () => {
     },
   });
 };
-
-async function sendEmail(env: Env, data: ContactForm) {
-  const socket = connect(
-    { hostname: env.SMTP_HOST, port: 465 },
-    { secureTransport: true }
-  );
-
-  const writer = socket.writable.getWriter();
-  const reader = socket.readable.getReader();
-
-  async function read(): Promise<string> {
-    const { value } = await reader.read();
-    return value ? decoder.decode(value) : "";
-  }
-
-  async function send(cmd: string): Promise<string> {
-    await writer.write(encoder.encode(cmd + "\r\n"));
-    return read();
-  }
-
-  try {
-    // SMTP handshake
-    await read(); // 220 greeting
-
-    await send("EHLO baurendax.de");
-    await send("AUTH LOGIN");
-    await send(btoa(env.SMTP_USER));
-    const authResult = await send(btoa(env.SMTP_PASS));
-
-    if (!authResult.startsWith("235")) {
-      throw new Error("SMTP auth failed: " + authResult);
-    }
-
-    await send(`MAIL FROM:<${env.SMTP_USER}>`);
-    await send(`RCPT TO:<${env.MAIL_TO}>`);
-    await send("DATA");
-
-    // Build email
-    const subject = `Neue Anfrage: ${data.name} — ${data.propertyType || "Wärmepumpe"}`;
-    const encodedSubject = `=?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=`;
-    const htmlBody = buildEmailHtml(data, env.MAIL_TO);
-    const encodedBody =
-      btoa(unescape(encodeURIComponent(htmlBody)))
-        .match(/.{1,76}/g)
-        ?.join("\r\n") || "";
-
-    const message = [
-      `From: Baurendax Website <${env.SMTP_USER}>`,
-      `To: <${env.MAIL_TO}>`,
-      `Reply-To: ${data.name} <${data.email}>`,
-      `Subject: ${encodedSubject}`,
-      "MIME-Version: 1.0",
-      "Content-Type: text/html; charset=UTF-8",
-      "Content-Transfer-Encoding: base64",
-      `Date: ${new Date().toUTCString()}`,
-      "",
-      encodedBody,
-    ].join("\r\n");
-
-    // Send body + terminator
-    await writer.write(encoder.encode(message + "\r\n.\r\n"));
-    await read(); // 250 OK
-
-    await send("QUIT");
-  } finally {
-    await writer.close();
-    socket.close();
-  }
-}
 
 function esc(s: string): string {
   return s

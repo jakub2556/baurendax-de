@@ -17,8 +17,6 @@ export default function Impressum() {
         <p>
           Baurendax
           <br />
-          Inhaber: Peter Bauer
-          <br />
           Deutschlandweiter Service
           <br />
           Deutschland
@@ -33,8 +31,6 @@ export default function Impressum() {
 
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
         <p>
-          Peter Bauer
-          <br />
           Baurendax
         </p>
 
