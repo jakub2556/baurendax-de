@@ -13,11 +13,8 @@ interface ContactForm {
 
 interface Env {
   RESEND_API_KEY: string;
-  MAIL_TO: string;
-  MAIL_FROM: string;
 }
 
-// Handle POST — send email via Resend API
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const headers = {
     "Content-Type": "application/json",
@@ -27,7 +24,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     const data: ContactForm = await context.request.json();
 
-    // Honeypot spam check
     if (data._honey) {
       return new Response(JSON.stringify({ success: true }), { headers });
     }
@@ -39,28 +35,27 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    const mailTo = context.env.MAIL_TO || "info@baurendax.de";
-    const mailFrom = context.env.MAIL_FROM || "Baurendax Website <no-reply@baurendax.de>";
+    const apiKey = context.env.RESEND_API_KEY || "re_gJdNU9eZ_2G9Ajtr7RFSuUEqzotqnVJaC";
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${context.env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: mailFrom,
-        to: [mailTo],
+        from: "Baurendax Website <onboarding@resend.dev>",
+        to: ["info@baurendax.de"],
         reply_to: data.email,
         subject: `Neue Anfrage: ${data.name} — ${data.propertyType || "Wärmepumpe"}`,
-        html: buildEmailHtml(data, mailTo),
+        html: buildEmailHtml(data),
       }),
     });
 
     if (!res.ok) {
       const err = await res.text();
       console.error("Resend error:", res.status, err);
-      throw new Error(`Resend API error: ${res.status}`);
+      throw new Error("Resend API error");
     }
 
     return new Response(JSON.stringify({ success: true }), { headers });
@@ -73,7 +68,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 };
 
-// Handle CORS preflight
 export const onRequestOptions: PagesFunction = async () => {
   return new Response(null, {
     headers: {
@@ -85,14 +79,10 @@ export const onRequestOptions: PagesFunction = async () => {
 };
 
 function esc(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function buildEmailHtml(d: ContactForm, mailTo: string): string {
+function buildEmailHtml(d: ContactForm): string {
   const row = (label: string, val: string, link?: string) =>
     val
       ? `<tr>
@@ -118,20 +108,13 @@ function buildEmailHtml(d: ContactForm, mailTo: string): string {
       ${row("Wohnfläche", d.area ? `${d.area} m²` : "")}
       ${row("PLZ", d.plz)}
     </table>
-    ${
-      d.message
-        ? `<div style="margin-top:16px;padding:16px;background:#f8fafc;border-radius:8px">
+    ${d.message ? `<div style="margin-top:16px;padding:16px;background:#f8fafc;border-radius:8px">
       <p style="margin:0 0 4px;color:#64748b;font-size:13px">Nachricht:</p>
       <p style="margin:0">${esc(d.message)}</p>
-    </div>`
-        : ""
-    }
+    </div>` : ""}
     <div style="margin-top:24px;padding:16px;background:#fff7ed;border-radius:8px;font-size:13px;color:#c45f1a">
       Antworten Sie direkt auf diese E-Mail — die Antwort geht an <strong>${esc(d.email)}</strong>
     </div>
   </div>
-  <p style="text-align:center;color:#94a3b8;font-size:11px;margin-top:16px">
-    Gesendet von baurendax.de Kontaktformular an ${esc(mailTo)}
-  </p>
 </body></html>`;
 }
