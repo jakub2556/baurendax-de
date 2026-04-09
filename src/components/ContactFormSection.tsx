@@ -19,24 +19,23 @@ const propertyTypes = [
   { label: "Gewerbe", icon: "🏭" },
 ];
 
-// Flag stripes: [top, middle?, bottom] — official Landesfarben
 const bundeslaender = [
-  { name: "Nordrhein-Westfalen", stripes: ["#009640", "#fff", "#E30613"] },
-  { name: "Bayern", stripes: ["#fff", "#0088CE"] },
-  { name: "Baden-Württemberg", stripes: ["#000", "#FFD700"] },
-  { name: "Hessen", stripes: ["#E30613", "#fff"] },
-  { name: "Niedersachsen", stripes: ["#000", "#E30613"] },
-  { name: "Rheinland-Pfalz", stripes: ["#000", "#E30613", "#FFD700"] },
-  { name: "Sachsen", stripes: ["#fff", "#009640"] },
-  { name: "Brandenburg", stripes: ["#E30613", "#fff"] },
-  { name: "Schleswig-Holstein", stripes: ["#003DA5", "#fff", "#E30613"] },
-  { name: "Thüringen", stripes: ["#fff", "#E30613"] },
-  { name: "Sachsen-Anhalt", stripes: ["#FFD700", "#000"] },
-  { name: "Berlin", stripes: ["#E30613", "#fff", "#E30613"] },
-  { name: "Hamburg", stripes: ["#fff", "#E30613"] },
-  { name: "Mecklenburg-Vorpommern", stripes: ["#003DA5", "#FFD700", "#E30613"] },
-  { name: "Saarland", stripes: ["#000", "#E30613", "#FFD700"] },
-  { name: "Bremen", stripes: ["#E30613", "#fff"] },
+  { name: "Nordrhein-Westfalen", wappen: "/images/wappen/nordrhein-westfalen.png" },
+  { name: "Bayern", wappen: "/images/wappen/bayern.png" },
+  { name: "Baden-Württemberg", wappen: "/images/wappen/baden-wuerttemberg.png" },
+  { name: "Hessen", wappen: "/images/wappen/hessen.png" },
+  { name: "Niedersachsen", wappen: "/images/wappen/niedersachsen.png" },
+  { name: "Rheinland-Pfalz", wappen: "/images/wappen/rheinland-pfalz.png" },
+  { name: "Sachsen", wappen: "/images/wappen/sachsen.png" },
+  { name: "Brandenburg", wappen: "/images/wappen/brandenburg.png" },
+  { name: "Schleswig-Holstein", wappen: "/images/wappen/schleswig-holstein.png" },
+  { name: "Thüringen", wappen: "/images/wappen/thueringen.png" },
+  { name: "Sachsen-Anhalt", wappen: "/images/wappen/sachsen-anhalt.png" },
+  { name: "Berlin", wappen: "/images/wappen/berlin.png" },
+  { name: "Hamburg", wappen: "/images/wappen/hamburg.png" },
+  { name: "Mecklenburg-Vorpommern", wappen: "/images/wappen/mecklenburg-vorpommern.png" },
+  { name: "Saarland", wappen: "/images/wappen/saarland.png" },
+  { name: "Bremen", wappen: "/images/wappen/bremen.png" },
 ];
 
 const stepImages = [
@@ -177,20 +176,13 @@ export function ContactFormSection() {
                 : "border-border hover:border-accent/40 text-foreground hover:bg-surface"
             }`}
           >
-            <svg className="w-6 h-4 flex-shrink-0 rounded-sm overflow-hidden" viewBox="0 0 24 16">
-              {land.stripes.length === 2 ? (
-                <>
-                  <rect width="24" height="8" fill={land.stripes[0]} />
-                  <rect y="8" width="24" height="8" fill={land.stripes[1]} />
-                </>
-              ) : (
-                <>
-                  <rect width="24" height="5.33" fill={land.stripes[0]} />
-                  <rect y="5.33" width="24" height="5.34" fill={land.stripes[1]} />
-                  <rect y="10.67" width="24" height="5.33" fill={land.stripes[2]} />
-                </>
-              )}
-            </svg>
+            <Image
+              src={land.wappen}
+              alt={`Wappen ${land.name}`}
+              width={24}
+              height={28}
+              className="w-6 h-7 object-contain flex-shrink-0"
+            />
             {land.name}
           </button>
         ))}
@@ -205,7 +197,7 @@ export function ContactFormSection() {
               : "border-border hover:border-accent/40 text-foreground hover:bg-surface"
           }`}
         >
-          <span className="w-5 h-4 rounded-sm bg-gray-300 flex-shrink-0" />
+          <span className="w-6 h-7 flex items-center justify-center text-lg flex-shrink-0">🇩🇪</span>
           Anderes Bundesland
         </button>
       </div>
