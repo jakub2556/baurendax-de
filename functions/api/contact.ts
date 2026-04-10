@@ -44,7 +44,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Baurendax Website <no-reply@send.baurendax.de>",
+        from: "Baurendax Website <no-reply@baurendax.de>",
         to: ["info@baurendax.de"],
         reply_to: data.email,
         subject: `Neue Anfrage: ${data.name} — ${data.propertyType || "Wärmepumpe"}`,
