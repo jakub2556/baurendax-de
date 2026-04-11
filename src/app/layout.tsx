@@ -80,7 +80,8 @@ export default function RootLayout({
           content="MJIVqYuXW2QKRYcL8VM7fbIB_GRU84D6r_q9Dn1iTEU"
         />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
